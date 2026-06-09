@@ -59,25 +59,25 @@ export default function VoutiquePage() {
           Enter Studio →
         </Link>
 
-        <Link
-          href="https://youtu.be/tKdXWK6GbQA?si=eeLMp_f5HdylIkVd"
-          className="
-          mt-16
-          inline-flex
-          rounded-full
-          border
-          border-[#E7B0B5]
-          px-8
-          py-4
-          text-lg
-          transition
-          hover:bg-[#E7B0B5]
-          hover:text-black
-          "
+        <a
+            href="https://youtu.be/tKdXWK6GbQA?si=eeLMp_f5HdylIkVd"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+            inline-flex
+            rounded-full
+            border
+            border-[#E7B0B5]
+            px-8
+            py-4
+            text-lg
+            transition
+            hover:bg-[#E7B0B5]
+            hover:text-black
+            "
         >
-          Enter Studio →
-        </Link>
-
+            Watch Concept Film →
+        </a>
       </section>
 
     </main>
