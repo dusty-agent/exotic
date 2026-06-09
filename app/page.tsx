@@ -1,65 +1,103 @@
-import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-[#FFFBF8] text-[#2A2321]">
+      <div className="mx-auto max-w-5xl px-12 py-32">
+
+        {/* Hero */}
+
+        <div className="mb-32">
+
+          <h1 className="text-7xl font-semibold leading-none">
+            EXOTIC
+            <br />
+            ORDINARY®
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="mt-8 text-2xl italic text-[#8A7A72]">
+            Beauty in the Mirror.
           </p>
+
+          <p className="mt-12 text-lg">
+            Design, craft and storytelling.
+          </p>
+
+          <p className="mt-4 text-lg text-[#8A7A72]">
+            From jewelry and objects to media,
+            archives and future collections.
+          </p>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Channels */}
+
+        <div>
+
+          <h2 className="mb-10 text-3xl font-semibold">
+            Channels
+          </h2>
+
+          <div className="space-y-10">
+
+            <Link
+              href="/voutique"
+              className="block"
+            >
+              <h3 className="text-xl font-medium">
+                The Exotic Voutique™ →
+              </h3>
+
+              <p className="mt-2 text-[#8A7A72]">
+                Virtual boutique, custom production
+                and future commerce.
+              </p>
+            </Link>
+
+            <Link
+              href="/archive"
+              className="block"
+            >
+              <h3 className="text-xl font-medium">
+                Archive →
+              </h3>
+
+              <p className="mt-2 text-[#8A7A72]">
+                Articles, essays and editorial contents.
+              </p>
+            </Link>
+
+            <Link
+              href="/stories"
+              className="block"
+            >
+              <h3 className="text-xl font-medium">
+                Stories →
+              </h3>
+
+              <p className="mt-2 text-[#8A7A72]">
+                Daily notes, behind the scenes and works.
+              </p>
+            </Link>
+
+            <Link
+              href="/shop"
+              className="block"
+            >
+              <h3 className="text-xl font-medium">
+                Shop →
+              </h3>
+
+              <p className="mt-2 text-[#8A7A72]">
+                Boutique, collections and selected objects.
+              </p>
+            </Link>
+
+          </div>
+
         </div>
-      </main>
-    </div>
+
+      </div>
+    </main>
   );
 }
