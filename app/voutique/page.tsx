@@ -6,7 +6,7 @@ export default function VoutiquePage() {
 
       <section className="mx-auto max-w-5xl px-8 py-32">
 
-        <p className="text-[#E7B0B5] tracking-[0.3em] uppercase">
+        <p className="tracking-[0.3em] uppercase text-[#E7B0B5]">
           The Future of Jewelry
         </p>
 
@@ -35,31 +35,32 @@ export default function VoutiquePage() {
         >
           Design your own jewelry.
           <br />
-          Select materials, gemstones and sizes.
+          Select materials, gemstones and stories.
           <br />
-          Crafted for you.
+          Crafted for the future.
         </p>
 
-        <Link
-          href="/studio"
-          className="
-          mt-16
-          inline-flex
-          rounded-full
-          border
-          border-[#E7B0B5]
-          px-8
-          py-4
-          text-lg
-          transition
-          hover:bg-[#E7B0B5]
-          hover:text-black
-          "
-        >
-          Enter Studio →
-        </Link>
+        <div className="mt-16 flex flex-wrap gap-6">
 
-        <a
+          <Link
+            href="/voutique/studio"
+            className="
+            inline-flex
+            rounded-full
+            border
+            border-[#E7B0B5]
+            px-8
+            py-4
+            text-lg
+            transition
+            hover:bg-[#E7B0B5]
+            hover:text-black
+            "
+          >
+            Enter Studio →
+          </Link>
+
+          <a
             href="https://youtu.be/tKdXWK6GbQA?si=eeLMp_f5HdylIkVd"
             target="_blank"
             rel="noopener noreferrer"
@@ -75,9 +76,12 @@ export default function VoutiquePage() {
             hover:bg-[#E7B0B5]
             hover:text-black
             "
-        >
+          >
             Watch Concept Film →
-        </a>
+          </a>
+
+        </div>
+
       </section>
 
     </main>
