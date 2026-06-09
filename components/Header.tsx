@@ -27,18 +27,20 @@ export default function Header() {
       >
         <Link
           href="/"
-          className="flex items-center gap-3"
+          className="flex items-center gap-2"
         >
           <Image
             src="/symbol_2.png"
             alt="Exotic Ordinary"
-            width={28}
-            height={28}
+            width={22}
+            height={22}
             priority
           />
 
           <span
             className="
+            hidden
+            md:block
             text-sm
             font-semibold
             tracking-[0.2em]
@@ -52,8 +54,10 @@ export default function Header() {
           className="
           flex
           items-center
-          gap-8
-          text-sm
+          gap-4
+          text-xs
+          md:gap-8
+          md:text-sm
           "
         >
           <a
