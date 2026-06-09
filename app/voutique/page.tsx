@@ -1,37 +1,85 @@
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
 
 export default function VoutiquePage() {
   return (
-    <>
-      <Navbar />
+    <main className="min-h-screen bg-[#090909] text-[#F7F1EC]">
 
-      <main className="min-h-screen bg-[#FFFBF8]">
+      <section className="mx-auto max-w-5xl px-8 py-32">
 
-        <div className="mx-auto max-w-5xl px-8 py-32">
+        <p className="text-[#E7B0B5] tracking-[0.3em] uppercase">
+          The Future of Jewelry
+        </p>
 
-          <h1 className="mb-8 text-6xl font-semibold">
-            The Exotic Voutique™
-          </h1>
+        <h1
+          className="
+          mt-6
+          text-6xl
+          md:text-8xl
+          font-bold
+          tracking-[-0.06em]
+          "
+        >
+          The Exotic
+          <br />
+          Voutique™
+        </h1>
 
-          <p className="mb-4 text-2xl italic text-[#8A7A72]">
-            Virtual boutique.
-          </p>
+        <p
+          className="
+          mt-10
+          max-w-2xl
+          text-lg
+          leading-8
+          text-[#C2B5AD]
+          "
+        >
+          Design your own jewelry.
+          <br />
+          Select materials, gemstones and sizes.
+          <br />
+          Crafted for you.
+        </p>
 
-          <p className="mb-16 text-lg text-[#8A7A72]">
-            Custom production and future commerce.
-          </p>
+        <Link
+          href="/studio"
+          className="
+          mt-16
+          inline-flex
+          rounded-full
+          border
+          border-[#E7B0B5]
+          px-8
+          py-4
+          text-lg
+          transition
+          hover:bg-[#E7B0B5]
+          hover:text-black
+          "
+        >
+          Enter Studio →
+        </Link>
 
-          <Link
-            href="/voutique/studio"
-            className="inline-block rounded-lg bg-black px-8 py-4 text-white"
-          >
-            Enter Studio
-          </Link>
+        <Link
+          href="https://youtu.be/tKdXWK6GbQA?si=eeLMp_f5HdylIkVd"
+          className="
+          mt-16
+          inline-flex
+          rounded-full
+          border
+          border-[#E7B0B5]
+          px-8
+          py-4
+          text-lg
+          transition
+          hover:bg-[#E7B0B5]
+          hover:text-black
+          "
+        >
+          Enter Studio →
+        </Link>
 
-        </div>
+      </section>
 
-      </main>
-    </>
+    </main>
   );
 }

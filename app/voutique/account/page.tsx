@@ -1,7 +1,7 @@
-export default function ProductionPage() {
+export default function AccountPage() {
     return (
       <main className="p-12">
-        <h1>Production</h1>
+        <h1>Account</h1>
         <p>Coming soon.</p>
       </main>
     );

@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
 import { useState } from "react";
 
 const bands = [
@@ -40,7 +39,6 @@ export default function StudioPage() {
 
   return (
     <>
-      <Navbar />
 
       <main className="mx-auto max-w-7xl px-8 py-12">
 

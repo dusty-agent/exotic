@@ -1,11 +1,145 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #fffbf8;
-  --text: #2a2321;
+  --eo-bg: #fffbf8;
+  --eo-surface: #f7eeea;
+  --eo-primary: #e3d0cc;
+  --eo-accent: #ddbb6a;
+
+  --eo-text: #2a2321;
+  --eo-muted: #8a7a72;
+
+  --eo-black: #090909;
+  --eo-pink: #e7b0b5;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
+  background:
+  linear-gradient(
+    180deg,
+    #FFFBF8 0%,
+    #F7EEEA 60%,
+    #ECDDD6 100%
+  );
+
+  color: #2A2321;
+
+  font-family:
+    Inter,
+    system-ui,
+    sans-serif;
+}
+
+::selection {
+  background: #e7b0b5;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.hero-title {
+  font-size: clamp(4rem, 10vw, 8rem);
+
+  line-height: 0.9;
+
+  font-weight: 700;
+
+  letter-spacing: -0.06em;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+
+  font-style: italic;
+
+  color: var(--eo-muted);
+}
+
+.hero-description {
+  max-width: 40rem;
+
+  line-height: 1.9;
+
+  color: var(--eo-muted);
+}
+
+.eo-card {
+  background: rgba(255,255,255,0.5);
+
+  border: 1px solid #e3d0cc;
+
+  border-radius: 32px;
+
+  padding: 2rem;
+
+  transition: all 0.3s ease;
+}
+
+.eo-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.05);
+}
+
+.nav-link {
+  color: var(--eo-muted);
+
+  font-size: 0.85rem;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: var(--eo-text);
+}
+
+.footer {
+  border-top: 1px solid #e3d0cc;
+
+  margin-top: 10rem;
+
+  padding: 3rem 0;
+
+  color: var(--eo-muted);
+
+  font-size: 0.85rem;
+}
+
+.section {
+  margin-top: 10rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+.channel {
+  margin-bottom: 3rem;
+}
+
+.channel-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.channel-desc {
+  color: #8a7a72;
+  margin-top: 0.75rem;
 }

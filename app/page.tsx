@@ -1,103 +1,224 @@
-import Link from "next/link";
+import Image from "next/image";
 
-export default function HomePage() {
-  return (
-    <main className="min-h-screen bg-[#FFFBF8] text-[#2A2321]">
-      <div className="mx-auto max-w-5xl px-12 py-32">
+export default function Home() {
+return ( <main className="min-h-screen">
 
-        {/* Hero */}
+  {/* Hero */}
 
-        <div className="mb-32">
+  <section className="max-w-6xl mx-auto px-8 pt-24 pb-16">
 
-          <h1 className="text-7xl font-semibold leading-none">
-            EXOTIC
-            <br />
-            ORDINARY®
-          </h1>
+    <h1
+      className="
+      text-7xl
+      md:text-9xl
+      font-bold
+      tracking-[-0.06em]
+      leading-[0.9]
+      "
+    >
+      EXOTIC
+      <br />
+      ORDINARY®
+    </h1>
 
-          <p className="mt-8 text-2xl italic text-[#8A7A72]">
-            Beauty in the Mirror.
-          </p>
+    <p
+      className="
+      mt-8
+      text-2xl
+      italic
+      text-[#8A7A72]
+      "
+    >
+      Beauty in the Mirror.
+    </p>
 
-          <p className="mt-12 text-lg">
-            Design, craft and storytelling.
-          </p>
+    <p
+      className="
+      mt-10
+      max-w-xl
+      text-base
+      leading-8
+      text-[#8A7A72]
+      "
+    >
+      Beauty, craft and storytelling.
+      <br />
+      From jewelry and objects
+      <br />
+      to future collections.
+    </p>
 
-          <p className="mt-4 text-lg text-[#8A7A72]">
-            From jewelry and objects to media,
-            archives and future collections.
-          </p>
+    <Image
+      src="/warm_silvlin.png"
+      alt="Exotic Ordinary Collection"
+      width={1600}
+      height={900}
+      priority
+      className="
+      mt-20
+      w-full
+      rounded-[40px]
+      object-cover
+      "
+    />
 
-        </div>
+  </section>
 
-        {/* Channels */}
+  {/* Discover */}
 
-        <div>
+  <section className="max-w-6xl mx-auto px-8 py-20">
 
-          <h2 className="mb-10 text-3xl font-semibold">
-            Channels
-          </h2>
+    <h2
+      className="
+      text-4xl
+      font-bold
+      mb-12
+      "
+    >
+      Discover
+    </h2>
 
-          <div className="space-y-10">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
 
-            <Link
-              href="/voutique"
-              className="block"
-            >
-              <h3 className="text-xl font-medium">
-                The Exotic Voutique™ →
-              </h3>
+      {/* Boutique */}
 
-              <p className="mt-2 text-[#8A7A72]">
-                Virtual boutique, custom production
-                and future commerce.
-              </p>
-            </Link>
+      <a
+        href="https://naver.me/GctERDE8"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+        rounded-3xl
+        border
+        border-[#E3D0CC]
+        bg-white/20
+        p-8
+        transition-all
+        duration-300
+        hover:bg-white/40
+        "
+      >
+        <h3 className="text-2xl font-semibold">
+          The Exotic Boutique →
+        </h3>
 
-            <Link
-              href="/archive"
-              className="block"
-            >
-              <h3 className="text-xl font-medium">
-                Archive →
-              </h3>
+        <p className="mt-3 text-[#8A7A72]">
+          Visit our boutique and showroom.
+        </p>
+      </a>
 
-              <p className="mt-2 text-[#8A7A72]">
-                Articles, essays and editorial contents.
-              </p>
-            </Link>
+      {/* Naver Shop */}
 
-            <Link
-              href="/stories"
-              className="block"
-            >
-              <h3 className="text-xl font-medium">
-                Stories →
-              </h3>
+      <a
+        href="https://smartstore.naver.com/exoticordinary"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+        rounded-3xl
+        border
+        border-[#E3D0CC]
+        bg-white/20
+        p-8
+        transition-all
+        duration-300
+        hover:bg-white/40
+        "
+      >
+        <h3 className="text-2xl font-semibold">
+          Naver Shop →
+        </h3>
 
-              <p className="mt-2 text-[#8A7A72]">
-                Daily notes, behind the scenes and works.
-              </p>
-            </Link>
+        <p className="mt-3 text-[#8A7A72]">
+          Browse collections and online orders.
+        </p>
+      </a>
 
-            <Link
-              href="/shop"
-              className="block"
-            >
-              <h3 className="text-xl font-medium">
-                Shop →
-              </h3>
+      {/* Archive */}
 
-              <p className="mt-2 text-[#8A7A72]">
-                Boutique, collections and selected objects.
-              </p>
-            </Link>
+      <a
+        href="https://blog.naver.com/assetpick1"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+        rounded-3xl
+        border
+        border-[#E3D0CC]
+        bg-white/20
+        p-8
+        transition-all
+        duration-300
+        hover:bg-white/40
+        "
+      >
+        <h3 className="text-2xl font-semibold">
+          Journal & Archive →
+        </h3>
 
-          </div>
+        <p className="mt-3 text-[#8A7A72]">
+          Thoughts, stories and archives
+          behind Exotic Ordinary.
+        </p>
+      </a>
 
-        </div>
+      {/* About */}
 
-      </div>
-    </main>
-  );
+      <a
+        href="https://draft.best/#/exotic"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+        rounded-3xl
+        border
+        border-[#E3D0CC]
+        bg-white/20
+        p-8
+        transition-all
+        duration-300
+        hover:bg-white/40
+        "
+      >
+        <h3 className="text-2xl font-semibold">
+          About Exotic Ordinary →
+        </h3>
+
+        <p className="mt-3 text-[#8A7A72]">
+          Explore our story,
+          philosophy and vision.
+        </p>
+      </a>
+
+      {/* Voutique */}
+
+      <a
+        href="/voutique"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+        rounded-3xl
+        border-2
+        border-[#E7B0B5]
+        bg-white/20
+        p-8
+        transition-all
+        duration-300
+        hover:bg-white/40
+        "
+      >
+        <h3 className="text-2xl font-semibold">
+          The Exotic Voutique™ →
+        </h3>
+
+        <p className="mt-3 text-[#8A7A72]">
+          The future of jewelry,
+          custom creation and
+          digital craftsmanship.
+        </p>
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+);
 }
