@@ -91,17 +91,6 @@ export default function Header() {
             Voutiq™
           </Link>
 
-          <Link
-            href="https://draft.best"
-            className="
-            hidden
-            lg:block
-            text-xs
-            text-[#8A7A72]
-            "
-          >
-            DRAFT
-          </Link>
         </nav>
       </div>
     </header>
