@@ -6,22 +6,36 @@ import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "EXOTIC ORDINARY®",
-  description: "Beauty in the Mirror.",
+  description:
+  "Exotic Ordinary explores beauty through craftsmanship, storytelling, sound and digital experiences.",
 
   keywords: [
+    "exotic ordinary",
+    "experience brand",
     "jewelry",
     "custom jewelry",
-    "luxury jewelry",
-    "digital jewelry",
-    "exotic ordinary",
+    "storytelling",
+    "sound design",
+    "creative direction",
     "voutique",
+    "digital craftsmanship",
+    "boutique",
   ],
 
   openGraph: {
     title: "EXOTIC ORDINARY®",
-    description: "Beauty in the Mirror.",
-    images: ["/warm_silvlin.png"],
+    description:
+      "Exotic Ordinary explores beauty through craftsmanship, storytelling, sound and digital experiences.",
+    images: [
+      {
+        url: "/warm_silvlin.png",
+        width: 1600,
+        height: 900,
+        alt: "Warm Silvlin",
+      },
+    ],
   },
+  themeColor: "#FCF9F7",
 };
 
 export default function RootLayout({
@@ -36,7 +50,9 @@ export default function RootLayout({
         min-h-screen
         flex
         flex-col
-        text-[#2A2321]
+        bg-[#FCF9F7]
+        text-[#E3D0CC]
+        antialiased
         "
       >
         <Header />

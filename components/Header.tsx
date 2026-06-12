@@ -11,7 +11,7 @@ export default function Header() {
       bg-[#FFFBF8]/90
       backdrop-blur
       border-b
-      border-[#E3D0CC]
+      border-[#D8C7BD]
       "
     >
       <div
@@ -29,24 +29,16 @@ export default function Header() {
           href="/"
           className="flex items-center gap-2"
         >
-          <Image
-            src="/symbol_2.png"
-            alt="Exotic Ordinary"
-            width={22}
-            height={22}
-            priority
-          />
-
           <span
             className="
             hidden
             md:block
             text-sm
             font-semibold
-            tracking-[0.2em]
+            tracking-[0.25em]
             "
           >
-            EO
+            EXOTIC ORDINARY
           </span>
         </Link>
 
@@ -90,13 +82,25 @@ export default function Header() {
           <Link
             href="/voutique"
             className="
-            text-[#D98C97]
+            text-[#B88D73]
             font-medium
             hover:opacity-80
             transition
             "
           >
-            Voutique™
+            Voutiq™
+          </Link>
+
+          <Link
+            href="https://draft.best"
+            className="
+            hidden
+            lg:block
+            text-xs
+            text-[#8A7A72]
+            "
+          >
+            DRAFT
           </Link>
         </nav>
       </div>

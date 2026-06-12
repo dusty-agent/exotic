@@ -1,16 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --eo-bg: #fffbf8;
-  --eo-surface: #f7eeea;
-  --eo-primary: #e3d0cc;
-  --eo-accent: #ddbb6a;
+  --eo-bg: #FFFBF8;
 
-  --eo-text: #2a2321;
-  --eo-muted: #8a7a72;
+  --eo-surface: #F7EEEA;
 
-  --eo-black: #090909;
-  --eo-pink: #e7b0b5;
+  --eo-primary: #E3D0CC;
+
+  --eo-accent: #DDBB6A;
+
+  --eo-text: #2A2321;
+
+  --eo-muted: #8A7A72;
+
+  --eo-pink: #E7B0B5;
 }
 
 html {
@@ -18,13 +21,8 @@ html {
 }
 
 body {
-  background:
-  linear-gradient(
-    180deg,
-    #FFFBF8 0%,
-    #F7EEEA 60%,
-    #ECDDD6 100%
-  );
+  color: var(--eo-text);
+  background: #FFFBF8;
 
   color: #2A2321;
 

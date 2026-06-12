@@ -2,7 +2,12 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="border-b border-[#E3D0CC]">
+    <header className="
+        border-b 
+        border-[#D8C7BD] 
+        bg-[#FCF9F7]
+        "
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
 
         <Link
@@ -34,7 +39,7 @@ export default function Navbar() {
             href="/voutique"
             className="font-medium"
           >
-            Voutique™
+            Voutiq™
           </Link>
 
         </nav>
