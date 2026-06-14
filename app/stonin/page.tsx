@@ -237,7 +237,7 @@ return (
       <div className="rounded-3xl border border-[#D8C7BD] bg-white p-8">
 
         <h3 className="text-2xl font-semibold">
-          스톤이름스톤이름
+          천연 아콰마린
         </h3>
 
         <p
@@ -248,7 +248,7 @@ return (
           text-[#8A7A72]
           "
         >
-          Rhodolite Garnet
+          Natural Aquamarine;Beryl
         </p>
 
         <p
@@ -299,7 +299,7 @@ return (
       <div className="rounded-3xl border border-[#D8C7BD] bg-white p-8">
 
         <h3 className="text-2xl font-semibold">
-          스톤이름스톤이름
+          천연 그린 사파이어
         </h3>
 
         <p
@@ -310,7 +310,7 @@ return (
           text-[#8A7A72]
           "
         >
-          Rhodolite Garnet
+          Natural Green Sapphire:Corundum
         </p>
 
         <p
@@ -360,7 +360,7 @@ return (
       <div className="rounded-3xl border border-[#D8C7BD] bg-white p-8">
 
         <h3 className="text-2xl font-semibold">
-          스톤이름스톤이름
+          천연 지르콘
         </h3>
 
         <p
@@ -371,7 +371,189 @@ return (
           text-[#8A7A72]
           "
         >
-          Rhodolite Garnet
+          Natural Zircon
+        </p>
+
+        <p
+          className="
+          mt-6
+          text-[#8A7A72]
+          leading-7
+          "
+        >
+          감정서 보유 원석.
+          <br />
+          맞춤 제작 가능.
+        </p>
+
+        <p
+          className="
+          mt-4
+          text-sm
+          text-[#8A7A72]
+          "
+        >
+          Certified gemstone available
+          for bespoke jewelry creation.
+        </p>
+
+        <a
+        href="/studio"
+        className="
+        inline-block
+        mt-8
+        px-6
+        py-3
+        rounded-full
+        border
+        border-[#D8C7BD]
+        transition-all
+        hover:bg-[#F4EBE8]
+        "
+
+        >
+
+        이 원석으로 제작하기 →
+
+        </a>
+        </div>
+        <div className="rounded-3xl border border-[#D8C7BD] bg-white p-8">
+        <h3 className="text-2xl font-semibold">
+          천연 투어멀린
+        </h3>
+
+        <p
+          className="
+          mt-2
+          text-sm
+          italic
+          text-[#8A7A72]
+          "
+        >
+          Natural Tourmaline
+        </p>
+
+        <p
+          className="
+          mt-6
+          text-[#8A7A72]
+          leading-7
+          "
+        >
+          감정서 보유 원석.
+          <br />
+          맞춤 제작 가능.
+        </p>
+
+        <p
+          className="
+          mt-4
+          text-sm
+          text-[#8A7A72]
+          "
+        >
+          Certified gemstone available
+          for bespoke jewelry creation.
+        </p>
+
+        <a
+        href="/studio"
+        className="
+        inline-block
+        mt-8
+        px-6
+        py-3
+        rounded-full
+        border
+        border-[#D8C7BD]
+        transition-all
+        hover:bg-[#F4EBE8]
+        "
+
+        >
+
+        이 원석으로 제작하기 →
+
+        </a>
+
+      </div>
+
+      <div className="rounded-3xl border border-[#D8C7BD] bg-white p-8">
+
+        <h3 className="text-2xl font-semibold">
+          천연 토파즈
+        </h3>
+
+        <p
+          className="
+          mt-2
+          text-sm
+          italic
+          text-[#8A7A72]
+          "
+        >
+          Natural Topaz
+        </p>
+
+        <p
+          className="
+          mt-6
+          text-[#8A7A72]
+          leading-7
+          "
+        >
+          감정서 보유 원석.
+          <br />
+          맞춤 제작 가능.
+        </p>
+
+        <p
+          className="
+          mt-4
+          text-sm
+          text-[#8A7A72]
+          "
+        >
+          Certified gemstone available
+          for bespoke jewelry creation.
+        </p>
+
+        <a
+        href="/studio"
+        className="
+        inline-block
+        mt-8
+        px-6
+        py-3
+        rounded-full
+        border
+        border-[#D8C7BD]
+        transition-all
+        hover:bg-[#F4EBE8]
+        "
+
+        >
+
+        이 원석으로 제작하기 →
+
+        </a>
+
+      </div>
+      <div className="rounded-3xl border border-[#D8C7BD] bg-white p-8">
+
+        <h3 className="text-2xl font-semibold">
+          천연 로돌라이트 가닛
+        </h3>
+
+        <p
+          className="
+          mt-2
+          text-sm
+          italic
+          text-[#8A7A72]
+          "
+        >
+          Natural Rhodolite;Garnet
         </p>
 
         <p

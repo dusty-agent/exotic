@@ -21,6 +21,7 @@ return ( <main className="min-h-screen bg-[#FFFBF8]">
       "
     />
 
+
 <h1
       className="
       Mmt-24
@@ -44,7 +45,7 @@ return ( <main className="min-h-screen bg-[#FFFBF8]">
       text-[#8A7A72]
       "
     >
-      Beauty in the Mirror.
+      아름다움을 기록합니다.
     </p>
 
     <p
@@ -56,15 +57,20 @@ return ( <main className="min-h-screen bg-[#FFFBF8]">
       text-[#8A7A72]
       "
     >
-      Creating experiences through
+      Exotic Ordinary는
+      아름다움에 대한 기록입니다.
       <br />
-      craftsmanship,
       <br />
-      storytelling,
+      주얼리,
+      원석,
+      이야기,
+      공간,
+      그리고 디지털 경험까지.
       <br />
-      sound,
       <br />
-      and digital spaces.
+      모든 프로젝트는
+      호기심에서 시작되어
+      하나의 아카이브로 남습니다.
     </p>
 
   </section>
@@ -74,37 +80,10 @@ return ( <main className="min-h-screen bg-[#FFFBF8]">
   <section className="max-w-6xl mx-auto px-8 py-20">
 
     <h2 className="text-4xl font-bold mb-12">
-      Experiences
+    Media
     </h2>
 
     <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-
-      <a
-        href="https://blog.naver.com/assetpick1"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="
-        rounded-3xl
-        border
-        border-[##D8C7BD]
-        bg-white
-        p-8
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-lg
-        "
-      >
-        <h3 className="text-2xl font-semibold">
-          Journal & Archive →
-        </h3>
-
-        <p className="mt-4 text-[#8A7A72] leading-7">
-          Stories, reflections and
-          creative records from
-          Exotic Ordinary.
-        </p>
-      </a>
 
       <a
         href="https://www.youtube.com/@exoticordinary"
@@ -123,12 +102,38 @@ return ( <main className="min-h-screen bg-[#FFFBF8]">
         "
       >
         <h3 className="text-2xl font-semibold">
-          Visual Stories →
+          영상 | Visual Stories →
         </h3>
 
         <p className="mt-4 text-[#8A7A72] leading-7">
-          Short films, sequences
-          and visual inspiration.
+          브랜드 필름,
+          숏폼 콘텐츠와
+          비주얼 프로젝트.
+        </p>
+      </a>
+      <a
+        href="https://blog.naver.com/assetpick1"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+        rounded-3xl
+        border
+        border-[##D8C7BD]
+        bg-white
+        p-8
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:shadow-lg
+        "
+      >
+        <h3 className="text-2xl font-semibold">
+          저널 | Journal →
+        </h3>
+
+        <p className="mt-4 text-[#8A7A72] leading-7">
+          Exotic Ordinary의 기록,
+          생각과 이야기들을 공유합니다.
         </p>
       </a>
 
@@ -149,12 +154,12 @@ return ( <main className="min-h-screen bg-[#FFFBF8]">
         "
       >
         <h3 className="text-2xl font-semibold">
-          Soundscapes →
+          사운드 | Sound Archive →
         </h3>
 
         <p className="mt-4 text-[#8A7A72] leading-7">
-          Original sounds and atmospheres
-          curated by Exotic Ordinary.
+          Exotic Ordinary가 수집하고
+          기록하는 사운드.
         </p>
       </a>
 
@@ -167,19 +172,17 @@ return ( <main className="min-h-screen bg-[#FFFBF8]">
   <section className="max-w-6xl mx-auto px-8 pb-32">
 
     <h2 className="text-4xl font-bold mb-12">
-      Craft & Commerce
+      Collections
     </h2>
 
     <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
 
       <a
-        href="https://naver.me/GctERDE8"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/silvlin"
         className="
         rounded-3xl
         border
-        border-[##D8C7BD]
+        border-[#D8C7BD]
         bg-white
         p-8
         transition-all
@@ -189,22 +192,25 @@ return ( <main className="min-h-screen bg-[#FFFBF8]">
         "
       >
         <h3 className="text-2xl font-semibold">
-          The Exotic Boutique →
+          SILVLIN™ →
         </h3>
 
+        <p className="mt-2 text-sm text-[#8A7A72]">
+          925 Silver Jewelry
+        </p>
+
         <p className="mt-4 text-[#8A7A72] leading-7">
-          Visit our boutique and showroom.
+          일상을 위한
+          925 실버 주얼리 컬렉션.
         </p>
       </a>
 
       <a
-        href="https://smartstore.naver.com/exoticordinary"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/stonin"
         className="
         rounded-3xl
         border
-        border-[##D8C7BD]
+        border-[#D8C7BD]
         bg-white
         p-8
         transition-all
@@ -214,20 +220,25 @@ return ( <main className="min-h-screen bg-[#FFFBF8]">
         "
       >
         <h3 className="text-2xl font-semibold">
-          Naver Shop →
+          STONIN™ →
         </h3>
 
+        <p className="mt-2 text-sm text-[#8A7A72]">
+          Gemstone Archive
+        </p>
+
         <p className="mt-4 text-[#8A7A72] leading-7">
-          Browse collections and online orders.
+          엄선된 원석과
+          맞춤 제작 주얼리.
         </p>
       </a>
 
       <a
-        href="/voutique"
+        href="/studio"
         className="
         rounded-3xl
         border
-        border-[#D8C7BD] 
+        border-[#D8C7BD]
         bg-white
         p-8
         transition-all
@@ -237,14 +248,19 @@ return ( <main className="min-h-screen bg-[#FFFBF8]">
         "
       >
         <h3 className="text-2xl font-semibold">
-          The Exotic Voutique™ →
+          Studio™ →
         </h3>
 
+        <p className="mt-2 text-sm text-[#8A7A72]">
+          Design Your Own Jewelry
+        </p>
+
         <p className="mt-4 text-[#8A7A72] leading-7">
-          Curation technology for custom jewelry,
-          craftsmanship and future commerce.
+          세상에 하나뿐인
+          나만의 주얼리를 제작해보세요.
         </p>
       </a>
+      
 
     </div>
 
@@ -274,7 +290,7 @@ return ( <main className="min-h-screen bg-[#FFFBF8]">
     leading-tight
     "
   >
-    Experiences beyond objects.
+    아름다움을 기록합니다.
   </h2>
 
   <p
@@ -286,16 +302,18 @@ return ( <main className="min-h-screen bg-[#FFFBF8]">
     text-[#8A7A72]
     "
   >
-    Exotic Ordinary is an ongoing exploration of beauty.
+    Exotic Ordinary는
+    아름다움을 탐구하는 프로젝트입니다.
     <br />
     <br />
-    From objects and jewelry
+    SILVLIN의 실버 컬렉션,
+    STONIN의 원석 아카이브,
+    그리고 Studio의 맞춤 제작 경험까지.
     <br />
-    to stories, sounds and digital experiences,
     <br />
-    each project begins with curiosity
-    <br />
-    and ends as part of a growing archive.
+    각각의 프로젝트는
+    서로 연결되어
+    하나의 생태계를 만들어갑니다.
   </p>
 
   <div className="mt-16">
@@ -315,12 +333,14 @@ return ( <main className="min-h-screen bg-[#FFFBF8]">
 <div className="mt-24 pt-12 border-t border-[#E3D0CC]">
 
   <p className="text-sm uppercase tracking-[0.2em] text-[#B49A8D]">
-    Part of DRAFT House
+    DRAFT House
   </p>
 
   <p className="mt-6 max-w-xl text-[#8A7A72] leading-8">
-    An independent ecosystem of
-    experiences, technology and intelligence.
+    경험,
+    기술,
+    큐레이션을 연구하는
+    독립 프로젝트 그룹.
   </p>
 
 </div>
