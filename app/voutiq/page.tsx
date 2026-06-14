@@ -135,7 +135,7 @@ export default function VoutiquePage() {
             <p className="text-[#E7B0B5]">01</p>
 
             <h3 className="mt-4 text-2xl font-semibold">
-              발견 | Discovery
+              발견 <br/> Discovery
             </h3>
 
             <p className="mt-6 text-[#C2B5AD] leading-8">
@@ -151,7 +151,7 @@ export default function VoutiquePage() {
             <p className="text-[#E7B0B5]">02</p>
 
             <h3 className="mt-4 text-2xl font-semibold">
-              제작 | Creation
+              제작  <br/> Creation
             </h3>
 
             <p className="mt-6 text-[#C2B5AD] leading-8">
@@ -167,7 +167,7 @@ export default function VoutiquePage() {
             <p className="text-[#E7B0B5]">03</p>
 
             <h3 className="mt-4 text-2xl font-semibold">
-              경험 | Experience
+              경험  <br/> Experience
             </h3>
 
             <p className="mt-6 text-[#C2B5AD] leading-8">
@@ -233,7 +233,7 @@ export default function VoutiquePage() {
             </p>
 
             <p>
-            • Dusty Draft 개발
+            • 더스티드래프트(Dusty Draft) 기획, 드래프트(draft) 개발
             </p>
 
             </div>
