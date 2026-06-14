@@ -35,29 +35,13 @@ export default function Footer() {
           Beauty in the Mirror.
         </p>
   
-        <p
-          className="
-          mt-8
-          max-w-xl
-          leading-8
-          text-[#8A7A72]
-          "
-        >
-          Craftsmanship.
-          <br />
-          Storytelling.
-          <br />
-          Sound.
-          <br />
-          Digital Experiences.
-        </p>
       </div>
   
       {/* Navigation */}
   
       <div
         className="
-        mt-12
+        mt-8
         flex
         flex-wrap
         gap-8
@@ -65,30 +49,29 @@ export default function Footer() {
         "
       >
         <a
+          href="/silvlin"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-70 transition"
+        >
+          SILVLIN →
+        </a>
+  
+        <a
+          href="/stonin"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-70 transition"
+        >
+          STONIN →
+        </a>
+        <a
           href="https://smartstore.naver.com/exoticordinary"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:opacity-70 transition"
         >
           Boutique →
-        </a>
-  
-        <a
-          href="https://blog.naver.com/assetpick1"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:opacity-70 transition"
-        >
-          Archive →
-        </a>
-  
-        <a
-          href="https://draft.best/#/exotic"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:opacity-70 transition"
-        >
-          About →
         </a>
   
         <a
@@ -137,56 +120,67 @@ export default function Footer() {
           Founder & Creative Director
         </p>
   
-        <p
-          className="
-          mt-6
-          max-w-xl
-          leading-8
-          text-[#8A7A72]
-          "
-        >
-          Storytelling,
-          <br />
-          Sound Curation,
-          <br />
-          Future Experiences.
-        </p>
       </div>
   
       {/* Draft House */}
   
-      <div
-        className="
-        mt-16
-        pt-12
-        border-t
-        border-[#E6D8D0]
-        "
-      >
-        <p
-          className="
-          text-xs
-          tracking-[0.3em]
-          text-[#B08A73]
-          "
-        >
-          PART OF DRAFT HOUSE
-        </p>
-  
-        <p
-          className="
-          mt-6
-          leading-8
-          text-[#8A7A72]
-          "
-        >
-          Exotic Ordinary explores beauty.
-          <br />
-          Dusty Draft builds technology.
-          <br />
-          ASSETPICKER researches value.
-        </p>
-      </div>
+      <div className="mt-24 pt-12 border-t border-[#E3D0CC]">
+
+<p
+  className="
+  text-sm
+  uppercase
+  tracking-[0.2em]
+  text-[#B49A8D]
+  "
+>
+  DRAFT House
+</p>
+
+<p
+  className="
+  mt-6
+  max-w-xl
+  text-[#8A7A72]
+  leading-8
+  "
+>
+  경험, 기술, 큐레이션을 연구하는
+  독립 프로젝트 그룹.
+</p>
+
+<div className="mt-10 flex flex-col gap-3">
+
+  <a
+    href="https://draft.best/#/exotic"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:opacity-70 transition"
+  >
+    Exotic Ordinary →
+  </a>
+
+  <a
+    href="https://draft.best/#/dusty"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:opacity-70 transition"
+  >
+    Dusty Draft →
+  </a>
+
+  <a
+    href="https://draft.best/#/assetpicker"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:opacity-70 transition"
+  >
+    ASSETPICKER →
+  </a>
+
+</div>
+
+</div>
   
       {/* Copyright */}
   
@@ -211,11 +205,6 @@ export default function Footer() {
     >
       DRAFT House
     </a>
-
-    <br />
-
-    An independent ecosystem of
-    experiences, technology and intelligence.
   </p>
 
 </div>

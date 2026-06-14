@@ -330,21 +330,6 @@ return ( <main className="min-h-screen bg-[#FFFBF8]">
 
 </div>
 
-<div className="mt-24 pt-12 border-t border-[#E3D0CC]">
-
-  <p className="text-sm uppercase tracking-[0.2em] text-[#B49A8D]">
-    DRAFT House
-  </p>
-
-  <p className="mt-6 max-w-xl text-[#8A7A72] leading-8">
-    경험,
-    기술,
-    큐레이션을 연구하는
-    독립 프로젝트 그룹.
-  </p>
-
-</div>
-
 </section>
 </main>
 
