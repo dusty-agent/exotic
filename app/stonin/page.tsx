@@ -58,20 +58,21 @@ return (
     </p>
 
   </section>
-
-  <Image
-          src="/stonin_studio.png"
-          alt="STONIN Collection"
-          width={1600}
-          height={900}
-          priority
-          className="
-            mb-28
-            w-full
-            rounded-[40px]
-            object-cover
-          "
-        />
+  <section className="max-w-6xl mx-auto px-8 pt-24 pb-20">
+    <Image
+            src="/stonin_studio.png"
+            alt="STONIN Collection"
+            width={1600}
+            height={900}
+            priority
+            className="
+              mb-28
+              w-full
+              rounded-[40px]
+              object-cover
+            "
+          />
+  </section>
 
   {/* About */}
 
@@ -146,7 +147,7 @@ return (
 
 
   {/* Hero Image */}
-
+  <section className="max-w-6xl mx-auto px-8 pt-24 pb-20">
   <Image
     src="/stonin_hero.png"
     alt="STONIN Archive"
@@ -160,6 +161,7 @@ return (
     object-cover
     "
   />
+  </section>
 
   {/* Stone Archive */}
 
