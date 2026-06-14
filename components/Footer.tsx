@@ -75,7 +75,7 @@ export default function Footer() {
         </a>
   
         <a
-          href="/voutique"
+          href="/voutiq"
           className="hover:opacity-70 transition"
         >
           Voutiq™ →
