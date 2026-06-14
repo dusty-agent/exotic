@@ -261,7 +261,7 @@ return ( <main className="mx-auto max-w-7xl px-8 py-12">
 
   </div>
 
-  <div className="grid grid-cols-2 gap-12">
+  <div className="grid gap-12">
     <div className="flex min-h-[700px] items-center justify-center rounded-xl bg-[#F4EBE8]">
 
       <div className="text-center">
@@ -300,397 +300,636 @@ return ( <main className="mx-auto max-w-7xl px-8 py-12">
       </div>
 
     </div>
-
+</div>
     <div className="space-y-8">
 
     <div className="border-t border-[#D8C7BD] pt-8 mt-8">
 
-<p
-  className="
-  mb-6
-  text-sm
-  uppercase
-  tracking-[0.2em]
-  text-[#B49A8D]
-  "
->
-  Customer Information
-</p>
+  <p
+    className="
+    text-sm
+    uppercase
+    tracking-[0.2em]
+    text-[#B49A8D]
+    "
+  >
+    고객 정보
+  </p>
 
-  <label className="mb-2 block">
-    Customer Name
-  </label>
+  <p
+    className="
+    mt-1
+    mb-8
+    text-sm
+    text-[#8A7A72]
+    "
+  >
+    Customer Information
+  </p>
 
-  <input
-    type="text"
-    value={customerName}
-    onChange={(e)=>
-      setCustomerName(e.target.value)
-    }
-    className="w-full border p-3"
-  />
+  <div className="space-y-6">
 
-</div>
+    <div>
 
-<div>
+      <label className="mb-2 block">
+        성함
+        <span className="ml-2 text-xs text-[#8A7A72]">
+          Name
+        </span>
+      </label>
 
-  <label className="mb-2 block">
-    Phone Number
-  </label>
-
-  <input
-    type="text"
-    value={customerPhone}
-    onChange={(e)=>
-      setCustomerPhone(e.target.value)
-    }
-    className="w-full border p-3"
-  />
-
-</div>
-
-<div>
-
-  <label className="mb-2 block">
-    Email Address
-  </label>
-
-  <input
-    type="email"
-    value={customerEmail}
-    onChange={(e)=>
-      setCustomerEmail(e.target.value)
-    }
-    className="w-full border p-3"
-  />
-
-</div>
-<div className="border-t border-[#D8C7BD] pt-8 mt-8">
-
-<p
-  className="
-  mb-6
-  text-sm
-  uppercase
-  tracking-[0.2em]
-  text-[#B49A8D]
-  "
->
-  CONFIGURATION
-</p>
-
-      <div>
-
-        <label className="mb-2 block">
-          Jewelry Type
-        </label>
-
-        <select
-          className="w-full border p-3"
-          value={type}
-          onChange={(e)=>
-            setType(e.target.value)
-          }
-        >
-          {jewelryTypes.map(item=>(
-            <option key={item}>
-              {item}
-            </option>
-          ))}
-        </select>
-
-      </div>
-
-      <div>
-
-        <label className="mb-2 block">
-          Metal
-        </label>
-
-        <select
-          className="w-full border p-3"
-          value={metal}
-          onChange={(e)=>
-            setMetal(e.target.value)
-          }
-        >
-          {metals.map(item=>(
-            <option key={item}>
-              {item}
-            </option>
-          ))}
-        </select>
-
-      </div>
-
-      <div>
-
-        <label className="mb-2 block">
-          Center Stone
-        </label>
-
-        <select
-          className="w-full border p-3"
-          value={stone}
-          onChange={(e)=>
-            setStone(e.target.value)
-          }
-        >
-          {stones.map(item=>(
-            <option key={item}>
-              {item}
-            </option>
-          ))}
-        </select>
-
-      </div>
-
-      {type === "Ring" && (
-        <>
-          <div>
-
-            <label className="mb-2 block">
-              Band Style
-            </label>
-
-            <select
-              className="w-full border p-3"
-              value={band}
-              onChange={(e)=>
-                setBand(e.target.value)
-              }
-            >
-              {ringBands.map(item=>(
-                <option key={item}>
-                  {item}
-                </option>
-              ))}
-            </select>
-
-          </div>
-
-          <div>
-
-            <label className="mb-2 block">
-              Ring Size
-            </label>
-
-            <input
-              type="number"
-              value={size}
-              onChange={(e)=>
-                setSize(Number(e.target.value))
-              }
-              className="w-full border p-3"
-            />
-
-          </div>
-        </>
-      )}
-
-      {type === "Necklace" && (
-        <>
-          <div>
-
-            <label className="mb-2 block">
-              Chain Style
-            </label>
-
-            <select
-              className="w-full border p-3"
-              value={chainStyle}
-              onChange={(e)=>
-                setChainStyle(e.target.value)
-              }
-            >
-              {chainStyles.map(item=>(
-                <option key={item}>
-                  {item}
-                </option>
-              ))}
-            </select>
-
-          </div>
-
-          <div>
-
-            <label className="mb-2 block">
-              Chain Length
-            </label>
-
-            <select
-              className="w-full border p-3"
-              value={chainLength}
-              onChange={(e)=>
-                setChainLength(e.target.value)
-              }
-            >
-              {chainLengths.map(item=>(
-                <option key={item}>
-                  {item}
-                </option>
-              ))}
-            </select>
-
-          </div>
-        </>
-      )}
-</div>
-      {type === "Earrings" && (
-        <div>
-
-          <label className="mb-2 block">
-            Earring Style
-          </label>
-
-          <select
-            className="w-full border p-3"
-            value={earringStyle}
-            onChange={(e)=>
-              setEarringStyle(e.target.value)
-            }
-          >
-            {earringStyles.map(item=>(
-              <option key={item}>
-                {item}
-              </option>
-            ))}
-          </select>
-          </div>
-      )}
-
-      {type === "Earrings" && (
-        <div>
-          
-          <label className="mb-2 block">
-            Post Material
-          </label>
-
-          <select
-            className="w-full border p-3"
-            value={postMaterial}
-            onChange={(e)=>
-              setPostMaterial(e.target.value)
-            }
-          >
-            {postMaterials.map(item=>(
-              <option key={item}>
-                {item}
-              </option>
-            ))}
-          </select>
-          </div>
-      )}
-
-
-
-
-      <div className="border-t pt-8">
-
-      <div className="grid grid-cols-3 gap-4 mb-4">
-
-      <button
-          className="
-          rounded-lg
-          border
-          border-[#D8C7BD]
-          bg-white
-          py-4
-          "
-          onClick={resetDesign}
-        >
-          Reset
-        </button>
-
-        <button
-          className="
-          rounded-lg
-          border
-          border-[#D8C7BD]
-          bg-white
-          py-4
-          "
-          onClick={saveDesign}
-        >
-          Save Design
-        </button>
-
-        <button
-          onClick={exportOrderSheet}
-          className="
-          rounded-lg
-          border
-          border-[#D8C7BD]
-          bg-white
-          py-4
-          "
-        >
-          Generate Order Sheet
-        </button>
-
-      </div>
-      
-
-<p
-  className="
-  mb-4
-  text-sm
-  italic
-  text-[#8A7A72]
-  "
->
-  Your request will be reviewed
-  before production begins.
-  We will contact you after
-  confirming the details.
-</p>
-      <button
-        onClick={requestProduction}
+      <input
+        type="text"
+        value={customerName}
+        onChange={(e)=>
+          setCustomerName(e.target.value)
+        }
         className="
         w-full
-        rounded-lg
-        bg-black
-        py-4
-        text-white
+        border
+        border-[#D8C7BD]
+        p-3
         "
-      >
-        Request Production
-      </button>
+      />
 
-      </div>
+    </div>
+
+    <div>
+
+      <label className="mb-2 block">
+        연락처
+        <span className="ml-2 text-xs text-[#8A7A72]">
+          Phone Number
+        </span>
+      </label>
+
+      <input
+        type="text"
+        value={customerPhone}
+        onChange={(e)=>
+          setCustomerPhone(e.target.value)
+        }
+        className="
+        w-full
+        border
+        border-[#D8C7BD]
+        p-3
+        "
+      />
+
+    </div>
+
+    <div>
+
+      <label className="mb-2 block">
+        이메일
+        <span className="ml-2 text-xs text-[#8A7A72]">
+          Email Address
+        </span>
+      </label>
+
+      <input
+        type="email"
+        value={customerEmail}
+        onChange={(e)=>
+          setCustomerEmail(e.target.value)
+        }
+        className="
+        w-full
+        border
+        border-[#D8C7BD]
+        p-3
+        "
+      />
 
     </div>
 
   </div>
 
-  {orderSheet && (
+</div>
+<div className="border-t border-[#D8C7BD] pt-8 mt-8">
 
-    <section className="mt-12">
+  <p
+    className="
+    text-sm
+    uppercase
+    tracking-[0.2em]
+    text-[#B49A8D]
+    "
+  >
+    주얼리 구성
+  </p>
 
-      <h2 className="mb-4 text-2xl font-semibold">
-        Request Preview
-      </h2>
+  <p
+    className="
+    mt-1
+    mb-8
+    text-sm
+    text-[#8A7A72]
+    "
+  >
+    Piece Configuration
+  </p>
 
-      <textarea
-        readOnly
-        value={orderSheet}
+  <div className="space-y-6">
+
+    <div>
+
+      <label className="mb-2 block">
+        주얼리 종류
+        <span className="ml-2 text-xs text-[#8A7A72]">
+          Jewelry Type
+        </span>
+      </label>
+
+      <select
         className="
         w-full
-        h-[400px]
-        rounded-xl
         border
         border-[#D8C7BD]
-        bg-white
-        p-6
-        font-mono
-        text-sm
+        p-3
         "
-      />
+        value={type}
+        onChange={(e)=>
+          setType(e.target.value)
+        }
+      >
+        {jewelryTypes.map(item=>(
+          <option key={item}>
+            {item}
+          </option>
+        ))}
+      </select>
 
-    </section>
+    </div>
 
-    )}
+    <div>
 
+      <label className="mb-2 block">
+        금속 소재
+        <span className="ml-2 text-xs text-[#8A7A72]">
+          Metal
+        </span>
+      </label>
+
+      <select
+        className="
+        w-full
+        border
+        border-[#D8C7BD]
+        p-3
+        "
+        value={metal}
+        onChange={(e)=>
+          setMetal(e.target.value)
+        }
+      >
+        {metals.map(item=>(
+          <option key={item}>
+            {item}
+          </option>
+        ))}
+      </select>
+
+    </div>
+
+    <div>
+
+      <label className="mb-2 block">
+        메인 원석
+        <span className="ml-2 text-xs text-[#8A7A72]">
+          Center Stone
+        </span>
+      </label>
+
+      <select
+        className="
+        w-full
+        border
+        border-[#D8C7BD]
+        p-3
+        "
+        value={stone}
+        onChange={(e)=>
+          setStone(e.target.value)
+        }
+      >
+        {stones.map(item=>(
+          <option key={item}>
+            {item}
+          </option>
+        ))}
+      </select>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div className="border-t border-[#D8C7BD] pt-8 mt-8">
+
+  <p
+    className="
+    text-sm
+    uppercase
+    tracking-[0.2em]
+    text-[#B49A8D]
+    "
+  >
+    상세 옵션
+  </p>
+
+  <p
+    className="
+    mt-1
+    mb-8
+    text-sm
+    text-[#8A7A72]
+    "
+  >
+    Detail Options
+  </p>
+  {type === "Ring" && (
+
+<div className="space-y-6">
+
+  <div>
+
+    <label className="mb-2 block">
+      반지 스타일
+      <span className="ml-2 text-xs text-[#8A7A72]">
+        Band Style
+      </span>
+    </label>
+
+    <select
+      className="
+      w-full
+      border
+      border-[#D8C7BD]
+      p-3
+      "
+      value={band}
+      onChange={(e)=>
+        setBand(e.target.value)
+      }
+    >
+      {ringBands.map(item=>(
+        <option key={item}>
+          {item}
+        </option>
+      ))}
+    </select>
+
+  </div>
+
+  <div>
+
+    <label className="mb-2 block">
+      반지 호수
+      <span className="ml-2 text-xs text-[#8A7A72]">
+        Ring Size
+      </span>
+    </label>
+
+    <input
+      type="number"
+      value={size}
+      onChange={(e)=>
+        setSize(Number(e.target.value))
+      }
+      className="
+      w-full
+      border
+      border-[#D8C7BD]
+      p-3
+      "
+    />
+
+  </div>
+
+</div>
+
+)}
+
+{type === "Necklace" && (
+
+<div className="space-y-6">
+
+  <div>
+
+    <label className="mb-2 block">
+      체인 스타일
+      <span className="ml-2 text-xs text-[#8A7A72]">
+        Chain Style
+      </span>
+    </label>
+
+    <select
+      className="
+      w-full
+      border
+      border-[#D8C7BD]
+      p-3
+      "
+      value={chainStyle}
+      onChange={(e)=>
+        setChainStyle(e.target.value)
+      }
+    >
+      {chainStyles.map(item=>(
+        <option key={item}>
+          {item}
+        </option>
+      ))}
+    </select>
+
+  </div>
+
+  <div>
+
+    <label className="mb-2 block">
+      체인 길이
+      <span className="ml-2 text-xs text-[#8A7A72]">
+        Chain Length
+      </span>
+    </label>
+
+    <select
+      className="
+      w-full
+      border
+      border-[#D8C7BD]
+      p-3
+      "
+      value={chainLength}
+      onChange={(e)=>
+        setChainLength(e.target.value)
+      }
+    >
+      {chainLengths.map(item=>(
+        <option key={item}>
+          {item}
+        </option>
+      ))}
+    </select>
+
+  </div>
+
+</div>
+
+)}
+
+{type === "Earrings" && (
+
+<div className="space-y-6">
+
+  <div>
+
+    <label className="mb-2 block">
+      귀걸이 형태
+      <span className="ml-2 text-xs text-[#8A7A72]">
+        Earring Style
+      </span>
+    </label>
+
+    <select
+      className="
+      w-full
+      border
+      border-[#D8C7BD]
+      p-3
+      "
+      value={earringStyle}
+      onChange={(e)=>
+        setEarringStyle(e.target.value)
+      }
+    >
+      {earringStyles.map(item=>(
+        <option key={item}>
+          {item}
+        </option>
+      ))}
+    </select>
+
+  </div>
+
+  <div>
+
+    <label className="mb-2 block">
+      침 소재
+      <span className="ml-2 text-xs text-[#8A7A72]">
+        Post Material
+      </span>
+    </label>
+
+    <select
+      className="
+      w-full
+      border
+      border-[#D8C7BD]
+      p-3
+      "
+      value={postMaterial}
+      onChange={(e)=>
+        setPostMaterial(e.target.value)
+      }
+    >
+      {postMaterials.map(item=>(
+        <option key={item}>
+          {item}
+        </option>
+      ))}
+    </select>
+
+  </div>
+
+</div>
+
+)}
+</div>
+
+<div className="border-t border-[#D8C7BD] pt-8 mt-8">
+
+  <p
+    className="
+    text-sm
+    uppercase
+    tracking-[0.2em]
+    text-[#B49A8D]
+    "
+  >
+    제작 준비
+  </p>
+
+  <p
+    className="
+    mt-1
+    mb-8
+    text-sm
+    text-[#8A7A72]
+    "
+  >
+    Production Preparation
+  </p>
+
+  <div className="grid grid-cols-3 gap-4">
+
+    <button
+      onClick={resetDesign}
+      className="
+      rounded-lg
+      border
+      border-[#D8C7BD]
+      bg-white
+      py-4
+      "
+    >
+      <div>초기화</div>
+      <div className="text-xs text-[#8A7A72]">
+        Reset
+      </div>
+    </button>
+
+    <button
+      onClick={saveDesign}
+      className="
+      rounded-lg
+      border
+      border-[#D8C7BD]
+      bg-white
+      py-4
+      "
+    >
+      <div>구성 저장</div>
+      <div className="text-xs text-[#8A7A72]">
+        Save Design
+      </div>
+    </button>
+
+    <button
+      onClick={exportOrderSheet}
+      className="
+      rounded-lg
+      border
+      border-[#D8C7BD]
+      bg-white
+      py-4
+      "
+    >
+      <div>주문서 생성</div>
+      <div className="text-xs text-[#8A7A72]">
+        Generate Order Sheet
+      </div>
+    </button>
+
+  </div>
+
+</div>
+{orderSheet && (
+
+<section className="mt-12">
+
+  <p
+    className="
+    text-sm
+    uppercase
+    tracking-[0.2em]
+    text-[#B49A8D]
+    "
+  >
+    주문서 미리보기
+  </p>
+
+  <p
+    className="
+    mt-1
+    mb-8
+    text-sm
+    text-[#8A7A72]
+    "
+  >
+    Request Preview
+  </p>
+
+  <textarea
+    readOnly
+    value={orderSheet}
+    className="
+    w-full
+    h-[400px]
+    rounded-xl
+    border
+    border-[#D8C7BD]
+    bg-white
+    p-6
+    font-mono
+    text-sm
+    "
+  />
+
+</section>
+
+)}
+
+<div className="border-t border-[#D8C7BD] pt-8 mt-8">
+
+  <p
+    className="
+    text-sm
+    uppercase
+    tracking-[0.2em]
+    text-[#B49A8D]
+    "
+  >
+    제작 문의
+  </p>
+
+  <p
+    className="
+    mt-1
+    mb-6
+    text-sm
+    text-[#8A7A72]
+    "
+  >
+    Production Request
+  </p>
+
+  <p
+    className="
+    mb-6
+    text-sm
+    leading-7
+    text-[#8A7A72]
+    "
+  >
+    주문서를 검토한 후 제작 가능 여부 및
+    예상 제작 일정을 안내드립니다.
+    <br />
+    We will review your request and
+    contact you after confirmation.
+  </p>
+
+  <button
+    onClick={requestProduction}
+    className="
+    w-full
+    rounded-lg
+    bg-black
+    py-4
+    text-white
+    "
+  >
+    제작 문의하기
+    <div className="text-xs opacity-70">
+      Request Production
+    </div>
+  </button>
+
+</div>
+</div>
 </main>
 
 );
