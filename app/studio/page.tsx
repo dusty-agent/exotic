@@ -249,19 +249,87 @@ const downloadTxt = () => {
 
 return ( <main className="mx-auto max-w-7xl px-8 py-12">
 
-  <div className="mb-12">
+    <div className="mb-16">
 
-    <h1 className="text-5xl font-semibold">
-      Studio
-    </h1>
+      <p
+        className="
+        text-sm
+        tracking-[0.2em]
+        uppercase
+        text-[#B49A8D]
+        "
+      >
+        Bespoke Jewelry Studio
+      </p>
 
-    <p className="mt-4 text-[#8A7A72]">
-      Configure your future piece.
-    </p>
+      <h1
+        className="
+        mt-6
+        text-5xl
+        md:text-7xl
+        font-light
+        leading-tight
+        "
+      >
+        세상에 하나뿐인
+        <br />
+        나만의 주얼리.
+      </h1>
 
-  </div>
+      <p
+        className="
+        mt-6
+        text-lg
+        italic
+        text-[#8A7A72]
+        "
+      >
+        One Of A Kind.
+        <br />
+        Trends Begin With You.
+      </p>
 
-  <div className="grid gap-12">
+      <p
+        className="
+        mt-10
+        max-w-2xl
+        text-[#8A7A72]
+        leading-8
+        "
+      >
+        원석과 금속을 선택하고,
+        디자인을 구성한 뒤
+        제작 요청서를 제출해보세요.
+        <br />
+        <br />
+        모든 주얼리는
+        당신만의 이야기를 담아
+        제작됩니다.
+      </p>
+
+    </div>
+
+
+  <div className="grid gap-2">
+    <p
+    className="
+    text-sm
+    uppercase
+    tracking-[0.2em]
+    text-[#B49A8D]
+    "
+  >
+    Design Preview
+  </p>
+  <h2
+    className="
+    text-3xl
+    font-light
+    "
+  >
+    현재 디자인
+  </h2>
+  
     <div className="flex min-h-[700px] items-center justify-center rounded-xl bg-[#F4EBE8]">
 
       <div className="text-center">
@@ -829,7 +897,7 @@ return ( <main className="mx-auto max-w-7xl px-8 py-12">
 </div>
 {orderSheet && (
 
-<section className="mt-12">
+<section className="mt-8">
 
   <p
     className="
@@ -839,18 +907,26 @@ return ( <main className="mx-auto max-w-7xl px-8 py-12">
     text-[#B49A8D]
     "
   >
-    주문서 미리보기
+    OrderSheet Preview
   </p>
+  <h2
+    className="
+    mt-2
+    mb-4
+    text-3xl
+    font-light
+    "
+  >
+    주문서 미리보기
+  </h2>
 
   <p
     className="
-    mt-1
-    mb-8
-    text-sm
+    mb-6
     text-[#8A7A72]
     "
   >
-    Request Preview
+    제작 요청 전 내용을 확인하세요.
   </p>
 
   <textarea

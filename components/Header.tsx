@@ -71,7 +71,7 @@ export default function Header() {
           </a>
 
           <Link
-            href="/voutique"
+            href="/studio"
             className="
             text-[#B88D73]
             font-medium
@@ -80,6 +80,18 @@ export default function Header() {
             "
           >
             Studio
+          </Link>
+
+          <Link
+            href="/voutiq"
+            className="
+            text-[#B88D73]
+            font-medium
+            hover:opacity-80
+            transition
+            "
+          >
+            Voutiq
           </Link>
 
           <a
