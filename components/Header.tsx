@@ -53,30 +53,21 @@ export default function Header() {
           "
         >
           <a
-            href="https://smartstore.naver.com/exoticordinary"
+            href="/silvlin"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#DDBB6A] transition"
           >
-            Boutique
+            SILVLIN
           </a>
 
           <a
-            href="https://blog.naver.com/assetpick1"
+            href="/stonin"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#DDBB6A] transition"
           >
-            Archive
-          </a>
-
-          <a
-            href="https://draft.best/#/exotic"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[#DDBB6A] transition"
-          >
-            About
+            STONIN
           </a>
 
           <Link
@@ -88,8 +79,17 @@ export default function Header() {
             transition
             "
           >
-            Voutiq™
+            Studio
           </Link>
+
+          <a
+            href="https://draft.best/#/exotic"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#DDBB6A] transition"
+          >
+            About
+          </a>
 
         </nav>
       </div>
