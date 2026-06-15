@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +7,6 @@ import { products } from "@/app/store/data/products";
 const product = products["loofah-white"];
 export default function LoofahPage() {
   const [quantity, setQuantity] = useState(1);
-
   return (
     <main className="min-h-screen bg-[#FFFBF8]">
 
@@ -35,7 +33,7 @@ export default function LoofahPage() {
           font-light
           tracking-[-0.04em]
           "
-        >
+        > 
           {product.title}
         </h1>
 
@@ -58,7 +56,7 @@ export default function LoofahPage() {
           text-[#8A7A72]
           "
         >
-          Handcrafted for everyday use.
+          {product.description}
         </p>
 
       </section>

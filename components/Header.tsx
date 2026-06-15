@@ -52,6 +52,19 @@ export default function Header() {
           md:text-sm
           "
         >
+           <Link
+            href="/store"
+            className="
+            text-[#B88D73]
+            font-bold
+            hover:opacity-90
+            transition
+            "
+          >
+            Store
+          </Link>
+          
+          
           <a
             href="/silvlin"
             target="_blank"
@@ -73,7 +86,7 @@ export default function Header() {
           <Link
             href="/studio"
             className="
-            text-[#B88D73]
+            text-[#8A7A72]
             font-medium
             hover:opacity-80
             transition
@@ -85,18 +98,18 @@ export default function Header() {
           <Link
             href="/store"
             className="
-            text-[#B88D73]
-            font-medium
+            text-[#8A7A72]
+            font-bold
             hover:opacity-80
             transition
             "
           >
-            Store
+            Store 
           </Link>
           <Link
             href="/voutiq"
             className="
-            text-[#B88D73]
+            text-[#8A7A72]
             font-medium
             hover:opacity-80
             transition
@@ -109,7 +122,8 @@ export default function Header() {
             href="https://draft.best/#/exotic"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-[#DDBB6A] transition"
+            className="hover:text-[#8A7A72] font-medium
+            hover:opacity-80 transition"
           >
             About
           </a>

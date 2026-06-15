@@ -1,9 +1,12 @@
 export const products = {
     "loofah-olive": {
-      title: "Handcrafted Loofah olive",
+      slug: "loofah-olive",
+      title: "Handcrafted Loofah",
       color: "Olive",
       price: 6900,
-      category: "Exotic Living",
+      category: "Exotic Livings",
+      description:
+      "Handcrafted for everyday cleaning and simple living.",
       images: {
        product: "/livings/loofah-olive/loofah-olive-0.png",
        texture: "/livings/loofah-olive/loofah-olive-1.jpg",
@@ -12,10 +15,13 @@ export const products = {
     },
   
     "loofah-pink": {
-      title: "Handcrafted Loofah pink",
+      slug: "loofah-pink",
+      title: "Handcrafted Loofah",
       color: "Pink",
       price: 6900,
-      category: "Exotic Living",
+      category: "Exotic Livings",
+      description:
+      "Handcrafted for everyday cleaning and simple living.",
       images: {
         product: "/livings/loofah-pink/loofah-pink-0.png",
         texture: "/livings/loofah-pink/loofah-pink-1.jpg",
@@ -24,10 +30,13 @@ export const products = {
      },
   
     "loofah-sage": {
-      title: "Handcrafted Loofah sage",
+      slug: "loofah-sage",
+      title: "Handcrafted Loofah",
       color: "Sage",
       price: 6900,
-      category: "Exotic Living",
+      category: "Exotic Livings",
+      description:
+      "Handcrafted for everyday cleaning and simple living.",
       images: {
         product: "/livings/loofah-sage/loofah-sage-0.png",
         texture: "/livings/loofah-sage/loofah-sage-1.jpg",
@@ -36,11 +45,14 @@ export const products = {
      },
 
     "loofah-white": {
-      title: "Handcrafted Loofah white",
+      slug: "loofah-white",
+      title: "Handcrafted Loofah",
       color: "White",
       price: 6900,
-      category: "Exotic Living",
-        images: {
+      category: "Exotic Livings",
+      description:
+      "Handcrafted for everyday cleaning and simple living.",
+      images: {
        product: "/livings/loofah-white/loofah-white-0.png",
        texture: "/livings/loofah-white/loofah-white-1.jpg",
        lifestyle: "/livings/loofah-white/loofah-white-2.jpg",

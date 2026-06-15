@@ -56,7 +56,7 @@ export default function LoofahPage() {
           text-[#8A7A72]
           "
         >
-          Handcrafted for everyday use.
+          <p>{product.description}</p>
         </p>
 
       </section>
@@ -334,11 +334,19 @@ export default function LoofahPage() {
 
     <button
 onClick={() => {
-console.log({
-product: product.title,
-color: product.color,
-quantity,
-});
+
+  const cart = [
+    {
+      slug: "loofah-white",
+      quantity,
+    },
+  ];
+
+  localStorage.setItem(
+    "cart",
+    JSON.stringify(cart)
+  );
+
 }}
 className="
 px-8
