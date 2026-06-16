@@ -1,9 +1,15 @@
 import { products } from "@/app/store/data/products";
 import ProductClient from "./ProductClient";
 
-export async function generateMetadata({
-    params,
-  }) {
+export async function generateMetadata(
+    {
+      params,
+    }: {
+      params: {
+        slug: string;
+      };
+    }
+  ) {
     const product =
       products[
         params.slug as keyof typeof products
