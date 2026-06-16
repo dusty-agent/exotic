@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<urlset
- xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://exoticordinary.com</loc>
+    <loc>https://exoticordinary.com/</loc>
   </url>
 
   <url>
-    <loc>https://exoticordinary.com/about</loc>
+    <loc>https://exoticordinary.com/store</loc>
   </url>
 
   <url>
-    <loc>https://exoticordinary.com/archive</loc>
+    <loc>https://exoticordinary.com/store/livings</loc>
   </url>
 
   <url>
-    <loc>https://exoticordinary.com/stories</loc>
+    <loc>https://exoticordinary.com/store/livings/loofah-white</loc>
   </url>
 
   <url>
-    <loc>https://exoticordinary.com/shop</loc>
+    <loc>https://exoticordinary.com/store/livings/loofah-pink</loc>
   </url>
 
   <url>
-    <loc>https://exoticordinary.com/voutique</loc>
+    <loc>https://exoticordinary.com/store/livings/loofah-olive</loc>
+  </url>
+
+  <url>
+    <loc>https://exoticordinary.com/store/livings/loofah-sage</loc>
   </url>
 
 </urlset>

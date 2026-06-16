@@ -8,6 +8,8 @@ import Script from "next/script";
 
 
 export const metadata: Metadata = {
+  metadataBase:
+    new URL("https://exoticordinary.com"),
   title: "EXOTIC ORDINARY®",
   description:
   "Exotic Ordinary explores beauty through craftsmanship, storytelling, sound and digital experiences.",

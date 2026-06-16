@@ -14,6 +14,9 @@ export async function generateMetadata(
       products[
         params.slug as keyof typeof products
       ];
+
+    const imageUrl =
+      `https://exoticordinary.com${product.images.product}`;
   
     return {
       title:
@@ -21,6 +24,44 @@ export async function generateMetadata(
   
       description:
         product.description,
+     
+      alternates: {
+        canonical:
+            `https://exoticordinary.com/store/livings/${params.slug}`,
+        },
+  
+      openGraph: {
+        title:
+          `${product.title} ${product.color}`,
+  
+        description:
+          product.description,
+  
+          images: [
+            {
+              url:
+                imageUrl,
+            width: 1200,
+            height: 630,
+            alt:
+              `${product.title} ${product.color}`,
+          },
+        ],
+      },
+  
+      twitter: {
+        card: "summary_large_image",
+  
+        title:
+          `${product.title} ${product.color}`,
+  
+        description:
+          product.description,
+  
+          images: [
+            imageUrl,
+          ],
+      },
     };
   }
 
