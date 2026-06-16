@@ -44,10 +44,10 @@ export default function Header() {
           "
         >
           <Link
-            href="/store"
+            href="/store/livings"
             className="hover:opacity-70 transition"
           >
-            Store
+            Livings
           </Link>
 
           <Link
@@ -60,6 +60,18 @@ export default function Header() {
             "
           >
             Cart
+          </Link>
+
+          <Link
+            href="/store"
+            className="
+            font-medium
+            text-[#bbbbbb]
+            hover:opacity-70
+            transition
+            "
+          >
+            Collections
           </Link>
         </nav>
       </div>

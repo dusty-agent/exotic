@@ -100,9 +100,94 @@ export default function CartPage() {
                   {product.price.toLocaleString()} KRW
                 </p>
 
-                <p className="mt-2">
-                  Qty: {item.quantity}
-                </p>
+                <div className="mt-6 flex items-center gap-4">
+
+                <button
+                  onClick={() => {
+
+                    const updated = [...items];
+
+                    updated[index].quantity =
+                      Math.max(
+                        1,
+                        updated[index].quantity - 1
+                      );
+
+                    setItems(updated);
+
+                    localStorage.setItem(
+                      "cart",
+                      JSON.stringify(updated)
+                    );
+
+                  }}
+                  className="
+                  w-8
+                  h-8
+                  rounded-full
+                  border
+                  border-[#D8C7BD]
+                  "
+                >
+                  −
+                </button>
+
+                <span>
+                  {item.quantity}
+                </span>
+
+                <button
+                  onClick={() => {
+
+                    const updated = [...items];
+
+                    updated[index].quantity += 1;
+
+                    setItems(updated);
+
+                    localStorage.setItem(
+                      "cart",
+                      JSON.stringify(updated)
+                    );
+
+                  }}
+                  className="
+                  w-8
+                  h-8
+                  rounded-full
+                  border
+                  border-[#D8C7BD]
+                  "
+                >
+                  +
+                </button>
+
+                <button
+                  onClick={() => {
+
+                    const updated =
+                      items.filter(
+                        (_, i) => i !== index
+                      );
+
+                    setItems(updated);
+
+                    localStorage.setItem(
+                      "cart",
+                      JSON.stringify(updated)
+                    );
+
+                  }}
+                  className="
+                  ml-4
+                  text-sm
+                  text-[#B49A8D]
+                  "
+                >
+                  Remove
+                </button>
+
+              </div>
               </div>
             );
           })}
