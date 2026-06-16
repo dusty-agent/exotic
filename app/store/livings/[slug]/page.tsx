@@ -1,6 +1,23 @@
 import { products } from "@/app/store/data/products";
 import ProductClient from "./ProductClient";
 
+export async function generateMetadata({
+    params,
+  }) {
+    const product =
+      products[
+        params.slug as keyof typeof products
+      ];
+  
+    return {
+      title:
+        `${product.title} ${product.color} | EXOTIC ORDINARY`,
+  
+      description:
+        product.description,
+    };
+  }
+
 export function generateStaticParams() {
   return Object.keys(products).map((slug) => ({
     slug,
