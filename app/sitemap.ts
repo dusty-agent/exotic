@@ -14,5 +14,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://exoticordinary.com/cart",
       lastModified: new Date(),
     },
+    {
+      url: "https://exoticordinary.com/store/livings",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://exoticordinary.com/store/livings/loofah-white",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://exoticordinary.com/store/livings/loofah-pink",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://exoticordinary.com/store/livings/loofah-olive",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://exoticordinary.com/store/livings/loofah-sage",
+      lastModified: new Date(),
+    },
   ];
 }
