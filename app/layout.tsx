@@ -4,6 +4,9 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+import Script from "next/script";
+
+
 export const metadata: Metadata = {
   title: "EXOTIC ORDINARY®",
   description:
@@ -35,6 +38,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+};
+
+export const viewport = {
   themeColor: "#FCF9F7",
 };
 
@@ -55,6 +61,11 @@ export default function RootLayout({
         antialiased
         "
       >
+
+  <Script
+    src="https://pay.nicepay.co.kr/v1/js/"
+    strategy="afterInteractive"
+  />
         <Header />
 
         <main className="flex-1">

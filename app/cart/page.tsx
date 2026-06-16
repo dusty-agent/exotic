@@ -1,14 +1,26 @@
 "use client";
 
-import { loadTossPayments } from "@tosspayments/payment-sdk";
 import { useEffect, useState } from "react";
 import { products } from "@/app/store/data/products";
 
 export default function CartPage() {
+
+  const clientKey =
+  process.env.NEXT_PUBLIC_NICE_CLIENT_KEY;
+
   const [items, setItems] = useState<any[]>([]);
+
+  useEffect(() => {
+    const cart = JSON.parse(
+      localStorage.getItem("cart") || "[]"
+    );
+
+    setItems(cart);
+  }, []);
 
   const totalAmount = items.reduce(
     (sum, item) => {
+
       const product =
         products[
           item.slug as keyof typeof products
@@ -18,44 +30,15 @@ export default function CartPage() {
         sum +
         product.price * item.quantity
       );
+
     },
     0
   );
 
-  const clientKey =
-    process.env.NEXT_PUBLIC_TOSS_CLIENT_KEY!;
-
   const payment = async () => {
-    const tossPayments =
-      await loadTossPayments(clientKey);
-
-    await tossPayments.requestPayment(
-      "카드",
-      {
-        amount: totalAmount,
-
-        orderId:
-          "EO-" + Date.now(),
-
-        orderName:
-          "Exotic Livings",
-
-        successUrl:
-          "http://localhost:3000/success",
-
-        failUrl:
-          "http://localhost:3000/fail",
-      }
-    );
+    console.log("clientKey =", clientKey);
+    console.log(window.AUTHNICE);
   };
-
-  useEffect(() => {
-    const cart = JSON.parse(
-      localStorage.getItem("cart") || "[]"
-    );
-
-    setItems(cart);
-  }, []);
 
   return (
     <main className="min-h-screen bg-[#FFFBF8]">
@@ -86,7 +69,6 @@ export default function CartPage() {
                 rounded-[24px]
                 "
               >
-
                 <h2 className="text-2xl">
                   {product.title}
                 </h2>
@@ -102,7 +84,6 @@ export default function CartPage() {
                 <p className="mt-2">
                   Qty: {item.quantity}
                 </p>
-
               </div>
             );
           })}

@@ -1,9 +1,7 @@
-export default function SuccessPage() {
+export default function FailPage() {
     return (
       <main className="min-h-screen flex items-center justify-center">
-        <h1 className="text-5xl">
-          Payment Success ✨
-        </h1>
+        <h1>Payment Failed 😢</h1>
       </main>
     );
   }
