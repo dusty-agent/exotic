@@ -36,8 +36,27 @@ export default function CartPage() {
   );
 
   const payment = async () => {
-    console.log("clientKey =", clientKey);
-    console.log(window.AUTHNICE);
+    const AUTHNICE = (window as any).AUTHNICE;
+  
+    AUTHNICE.requestPay({
+      clientId: process.env.NEXT_PUBLIC_NICE_CLIENT_KEY,
+    
+      method: "card",
+    
+      orderId: "EO-" + Date.now(),
+    
+      amount: totalAmount,
+    
+      goodsName: "Exotic Livings",
+    
+      returnUrl:
+        `${window.location.origin}/api/payments/approve`,
+    
+      fnError: function (result: any) {
+        console.log("NicePay Error");
+        console.log(result);
+      },
+    });
   };
 
   return (
