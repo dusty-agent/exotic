@@ -1,11 +1,13 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: Request) {
-  const body = await req.json();
+export async function GET(req: NextRequest) {
+  const searchParams = req.nextUrl.searchParams;
 
-  console.log("approve request", body);
+  console.log(
+    Object.fromEntries(searchParams.entries())
+  );
 
-  return NextResponse.json({
-    success: true,
-  });
+  return NextResponse.redirect(
+    new URL("/success", req.url)
+  );
 }

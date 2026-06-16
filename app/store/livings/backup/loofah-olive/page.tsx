@@ -56,7 +56,7 @@ export default function LoofahPage() {
           text-[#8A7A72]
           "
         >
-          <p>{product.description}</p>
+          {product.description}
         </p>
 
       </section>
@@ -335,12 +335,27 @@ export default function LoofahPage() {
     <button
 onClick={() => {
 
-  const cart = [
-    {
-      slug: "loofah-white",
+  const cart = JSON.parse(
+    localStorage.getItem("cart") || "[]"
+  );
+
+  const existingItem = cart.find(
+    (item: any) =>
+      item.slug === product.slug
+  );
+
+  if (existingItem) {
+
+    existingItem.quantity += quantity;
+
+  } else {
+
+    cart.push({
+      slug: product.slug,
       quantity,
-    },
-  ];
+    });
+
+  }
 
   localStorage.setItem(
     "cart",
