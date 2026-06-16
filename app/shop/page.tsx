@@ -1,9 +1,9 @@
-import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 
 export default function ShopPage() {
   return (
     <>
-      <Navbar />
+      <Header />
 
       <main className="mx-auto max-w-5xl px-8 py-24">
 

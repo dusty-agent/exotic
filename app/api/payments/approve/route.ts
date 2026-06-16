@@ -5,21 +5,20 @@ const resend = new Resend(
   process.env.RESEND_API_KEY
 );
 
-export async function GET(
+export async function POST(
   req: NextRequest
 ) {
 
-  const searchParams =
-    req.nextUrl.searchParams;
+  const body = await req.formData();
+
+  console.log("APPROVE CALLED");
 
   console.log(
-    Object.fromEntries(
-      searchParams.entries()
-    )
+    Object.fromEntries(body.entries())
   );
 
   await resend.emails.send({
-    from: "orders@your-domain.com",
+    from: "onboarding@resend.dev",
     to: "theplaceyoung@gmail.com",
 
     subject:

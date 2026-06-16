@@ -56,7 +56,7 @@ export default function Footer() {
         >
           SILVLIN →
         </a>
-  
+
         <a
           href="/stonin"
           target="_blank"
@@ -65,20 +65,28 @@ export default function Footer() {
         >
           STONIN →
         </a>
+
         <a
-          href="https://smartstore.naver.com/exoticordinary"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/studio"
           className="hover:opacity-70 transition"
         >
-          Boutique →
+          Studio →
         </a>
-  
+
         <a
           href="/voutiq"
           className="hover:opacity-70 transition"
         >
           Voutiq™ →
+        </a>
+
+        <a
+          href="https://draft.best/#/exotic"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-70 transition"
+        >
+          About →
         </a>
       </div>
   

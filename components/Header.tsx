@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
@@ -27,107 +26,41 @@ export default function Header() {
       >
         <Link
           href="/"
-          className="flex items-center gap-2"
+          className="
+          text-sm
+          font-semibold
+          tracking-[0.25em]
+          "
         >
-          <span
-            className="
-            hidden
-            md:block
-            text-sm
-            font-semibold
-            tracking-[0.25em]
-            "
-          >
-            EXOTIC ORDINARY
-          </span>
+          EXOTIC ORDINARY®
         </Link>
 
         <nav
           className="
           flex
           items-center
-          gap-4
-          text-xs
-          md:gap-8
-          md:text-sm
+          gap-6
+          text-sm
           "
         >
-           <Link
+          <Link
             href="/store"
-            className="
-            text-[#B88D73]
-            font-bold
-            hover:opacity-90
-            transition
-            "
+            className="hover:opacity-70 transition"
           >
             Store
           </Link>
-          
-          
-          <a
-            href="/silvlin"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[#DDBB6A] transition"
-          >
-            SILVLIN
-          </a>
-
-          <a
-            href="/stonin"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[#DDBB6A] transition"
-          >
-            STONIN
-          </a>
 
           <Link
-            href="/studio"
+            href="/cart"
             className="
-            text-[#8A7A72]
             font-medium
-            hover:opacity-80
+            text-[#B88D73]
+            hover:opacity-70
             transition
             "
           >
-            Studio
+            Cart
           </Link>
-
-          <Link
-            href="/store"
-            className="
-            text-[#8A7A72]
-            font-bold
-            hover:opacity-80
-            transition
-            "
-          >
-            Store 
-          </Link>
-          <Link
-            href="/voutiq"
-            className="
-            text-[#8A7A72]
-            font-medium
-            hover:opacity-80
-            transition
-            "
-          >
-            Voutiq
-          </Link>
-
-          <a
-            href="https://draft.best/#/exotic"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[#8A7A72] font-medium
-            hover:opacity-80 transition"
-          >
-            About
-          </a>
-
         </nav>
       </div>
     </header>
