@@ -44,6 +44,14 @@ export default function Header() {
           "
         >
           <Link
+            href="/store/silvlin"
+            className="hover:opacity-70 transition"
+          >
+            SILVLIN
+          </Link>
+
+
+          <Link
             href="/store/livings"
             className="hover:opacity-70 transition"
           >

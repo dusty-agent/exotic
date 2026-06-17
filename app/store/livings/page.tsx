@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { products } from "@/app/store/data/products";
+import { livings } from "@/app/store/data/livings";
 
 export default function LivingsPage() {
   return (
@@ -49,7 +49,7 @@ export default function LivingsPage() {
 
         <div className="grid md:grid-cols-2 gap-8">
        
-        {Object.entries(products).map(([slug, product]) => (
+        {Object.entries(livings).map(([slug, product]) => (
 
 <Link
   key={slug}
