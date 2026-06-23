@@ -81,6 +81,18 @@ export default function Header() {
           >
             Collections
           </Link>
+
+          <Link
+            href="/studio"
+            className="
+            font-medium
+            text-[#B88D73]
+            hover:opacity-70
+            transition
+            "
+          >
+            studio
+          </Link>
         </nav>
       </div>
     </header>
