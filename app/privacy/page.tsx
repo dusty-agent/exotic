@@ -13,7 +13,9 @@ export default function PrivacyPage() {
           </h2>
 
           <p>
-            EXOTIC ORDINARY는 상품 주문 및 고객 응대를 위하여 다음과 같은 개인정보를 수집합니다.
+            드래프트(이하 "회사")는
+            EXOTIC ORDINARY® 쇼핑몰 운영을 위해
+            다음과 같은 개인정보를 처리합니다.
           </p>
 
           <ul className="list-disc ml-6 mt-4 space-y-2">
@@ -26,8 +28,8 @@ export default function PrivacyPage() {
 
           <p className="mt-4">
             결제에 필요한 카드번호, 계좌번호 등의 금융정보는
-            NICEPAY를 통해 안전하게 처리되며,
-            EXOTIC ORDINARY는 해당 정보를 저장하거나 보관하지 않습니다.
+            NICEPAY(나이스페이)를 통해 안전하게 처리되며,
+            드래프트(draft)는 해당 정보를 저장하거나 보관하지 않습니다.
           </p>
 
         </section>
@@ -91,7 +93,7 @@ export default function PrivacyPage() {
           </p>
 
           <ul className="list-disc ml-6 mt-4 space-y-2">
-            <li>결제대행 : NICEPAY</li>
+            <li>결제대행 : NICEPAY(나이스페이)</li>
             <li>택배 배송 : 배송 계약 택배사</li>
             <li>이메일 발송 : 회사가 지정한 이메일 서비스</li>
           </ul>

@@ -132,7 +132,10 @@ export default function Footer() {
   >
 
     <p>
-      상호명 : 드래프트(draft)
+      상호 : 드래프트(draft)
+    </p>
+    <p>
+      브랜드 : EXOTIC ORDINARY®
     </p>
 
     <p>

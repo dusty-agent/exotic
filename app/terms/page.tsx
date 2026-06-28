@@ -12,9 +12,10 @@ export default function TermsPage() {
             제1조 (목적)
           </h2>
           <p>
-            본 약관은 EXOTIC ORDINARY(이하 "회사")가 운영하는
-            웹사이트에서 제공하는 상품 및 서비스의 이용과 관련하여
-            회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.
+            본 약관은 드래프트(이하 "회사")가 운영하는
+            EXOTIC ORDINARY® 쇼핑몰(이하 "몰")에서 제공하는
+            상품 및 서비스의 이용과 관련하여 회사와 이용자의 권리,
+            의무 및 책임사항을 규정함을 목적으로 합니다.
           </p>
         </section>
 
@@ -27,7 +28,8 @@ export default function TermsPage() {
           </p>
 
           <ul className="list-disc ml-6 mt-3 space-y-2">
-            <li>회사 : EXOTIC ORDINARY</li>
+            <li>회사 : 드래프트(draft)</li>
+            <li>몰 : 회사가 운영하는 EXOTIC ORDINARY® 쇼핑몰</li>
             <li>이용자 : 본 사이트를 방문하거나 서비스를 이용하는 자</li>
             <li>상품 : 회사가 판매하는 실물상품 및 디지털 콘텐츠</li>
             <li>디지털 콘텐츠 : 이미지, 그래픽, 다운로드 파일 등 온라인으로 제공되는 모든 콘텐츠</li>

@@ -137,7 +137,7 @@ export default function CheckoutClient() {
 
     if (!AUTHNICE) {
 
-      alert("NicePay가 아직 로드되지 않았습니다.");
+      alert("NicePay(나이스페이)가 아직 로드되지 않았습니다.");
 
       return;
 
@@ -187,11 +187,11 @@ export default function CheckoutClient() {
         </p>
 
         <h1 className="mt-6 text-6xl font-light">
-        체크아웃
+        주문 / 결제
       </h1>
 
       <p className="mt-4 text-[#8A7A72] italic">
-        Checkout
+        Checkout (Order & Payment)
       </p>
 
         <div className="grid lg:grid-cols-2 gap-20 mt-20">
@@ -271,11 +271,11 @@ export default function CheckoutClient() {
               <div>
 
               <div className="font-medium">
-                실시간 계좌이체
+                신용카드
               </div>
 
               <div className="text-sm text-[#8A7A72] mt-1">
-                Bank Transfer
+                Credit Card
               </div>
 
               </div>
@@ -305,9 +305,17 @@ export default function CheckoutClient() {
                   }
                 />
 
-                <span>
+                <div>
+
+                <div className="font-medium">
                   실시간 계좌이체
-                </span>
+                </div>
+
+                <div className="text-sm text-[#8A7A72] mt-1">
+                  Bank Transfer
+                </div>
+
+                </div>
 
               </label>
 
