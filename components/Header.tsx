@@ -45,7 +45,9 @@ export default function Header() {
         >
           <Link
             href="/store/silvlin"
-            className="hover:opacity-70 transition"
+            className="
+            hover:opacity-70 transition
+            font-bold"
           >
             SILVLIN
           </Link>
@@ -53,33 +55,27 @@ export default function Header() {
 
           <Link
             href="/store/livings"
-            className="hover:opacity-70 transition"
+            className="
+            hover:opacity-70 transition
+            font-bold"
           >
-            Livings
+            LIVINGS
+          </Link>
+
+          <Link
+            href="/store/ma"
+            className="
+            hover:opacity-70 transition
+            font-bold"
+          >
+            MA
           </Link>
 
           <Link
             href="/cart"
-            className="
-            font-medium
-            text-[#B88D73]
-            hover:opacity-70
-            transition
-            "
+            className="hover:opacity-70 transition"
           >
-            Cart
-          </Link>
-
-          <Link
-            href="/store"
-            className="
-            font-medium
-            text-[#bbbbbb]
-            hover:opacity-70
-            transition
-            "
-          >
-            Collections
+            CART
           </Link>
 
           <Link
@@ -91,7 +87,7 @@ export default function Header() {
             transition
             "
           >
-            studio
+            STUDIO
           </Link>
         </nav>
       </div>

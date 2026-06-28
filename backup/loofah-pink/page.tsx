@@ -56,7 +56,7 @@ export default function LoofahPage() {
           text-[#8A7A72]
           "
         >
-          Handcrafted for everyday use.
+          {product.description}
         </p>
 
       </section>

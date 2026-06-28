@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 
 import Script from "next/script";
 
-
 export const metadata: Metadata = {
   metadataBase:
     new URL("https://exoticordinary.com"),
@@ -53,6 +52,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+
       <body
         className="
         min-h-screen
@@ -64,10 +64,16 @@ export default function RootLayout({
         "
       >
 
-  <Script
-    src="https://pay.nicepay.co.kr/v1/js/"
-    strategy="afterInteractive"
-  />
+        <Script
+          src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"
+          strategy="afterInteractive"
+        />
+
+        <Script
+          src="https://pay.nicepay.co.kr/v1/js/"
+          strategy="afterInteractive"
+        />
+
         <Header />
 
         <main className="flex-1">
@@ -75,7 +81,9 @@ export default function RootLayout({
         </main>
 
         <Footer />
+
       </body>
+
     </html>
   );
 }

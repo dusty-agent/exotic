@@ -1,234 +1,474 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+
 import { products } from "@/app/store/data/products";
+
+type CartItem = {
+  slug: string;
+  quantity: number;
+};
 
 export default function CartPage() {
 
-  const clientKey =
-  process.env.NEXT_PUBLIC_NICE_CLIENT_KEY;
+  const router = useRouter();
 
-  const [items, setItems] = useState<any[]>([]);
+  const [items, setItems] =
+    useState<CartItem[]>([]);
 
   useEffect(() => {
-    const cart = JSON.parse(
-      localStorage.getItem("cart") || "[]"
-    );
 
-    setItems(cart);
+    const saved =
+      localStorage.getItem("cart");
+
+    if (saved) {
+
+      setItems(JSON.parse(saved));
+
+    }
+
   }, []);
 
-  const totalAmount = items.reduce(
-    (sum, item) => {
+  const updateCart = (
+    updated: CartItem[]
+  ) => {
 
+    setItems(updated);
+
+    localStorage.setItem(
+      "cart",
+      JSON.stringify(updated)
+    );
+
+  };
+
+  const subtotal = items.reduce(
+
+    (sum, item) => {
+  
       const product =
         products[
           item.slug as keyof typeof products
         ];
-
+  
+      if (!product) return sum;
+  
       return (
         sum +
-        product.price * item.quantity
+        product.price *
+        item.quantity
       );
-
-    },
-    0
-  );
-
-  const payment = async () => {
-    const AUTHNICE = (window as any).AUTHNICE;
   
-    AUTHNICE.requestPay({
-      clientId: process.env.NEXT_PUBLIC_NICE_CLIENT_KEY,
-    
-      method: "card",
-    
-      orderId: "EO-" + Date.now(),
-    
-      amount: totalAmount,
-    
-      goodsName: "Exotic Livings",
-    
-      returnUrl:
-        `${window.location.origin}/api/payments/approve`,
-    
-      fnError: function (result: any) {
-        console.log("NicePay Error");
-        console.log(result);
-      },
-    });
-  };
-
+    },
+  
+    0
+  
+  );
+  
+  const physicalSubtotal = items.reduce(
+  
+    (sum, item) => {
+  
+      const product =
+        products[
+          item.slug as keyof typeof products
+        ];
+  
+      if (!product) return sum;
+  
+      if (product.category === "Visual Archive") {
+  
+        return sum;
+  
+      }
+  
+      return (
+        sum +
+        product.price *
+        item.quantity
+      );
+  
+    },
+  
+    0
+  
+  );
+  
+  const hasPhysicalItem = items.some((item) => {
+  
+    const product =
+      products[
+        item.slug as keyof typeof products
+      ];
+  
+    if (!product) return false;
+  
+    return product.category !== "Visual Archive";
+  
+  });
+  
+  const shipping =
+  
+    !hasPhysicalItem
+  
+      ? 0
+  
+      : physicalSubtotal >= 50000
+  
+        ? 0
+  
+        : 3000;
+  
+  const total =
+  
+    subtotal + shipping;
   return (
+
     <main className="min-h-screen bg-[#FFFBF8]">
 
-      <section className="max-w-4xl mx-auto px-8 py-24">
+      <section className="max-w-5xl mx-auto px-8 py-24">
 
-        <h1 className="text-6xl font-light">
+        <p className="uppercase tracking-[0.2em] text-[#B49A8D]">
+          EXOTIC ORDINARY®
+        </p>
+
+        <h1 className="mt-6 text-6xl font-light">
           Cart
         </h1>
 
-        <div className="mt-12 space-y-4">
+        {
 
-          {items.map((item, index) => {
+          items.length === 0 && (
 
-            const product =
-              products[
-                item.slug as keyof typeof products
-              ];
+            <div className="py-32 text-center">
 
-            return (
-              <div
-                key={index}
+              <h2 className="text-5xl font-light">
+
+                Your cart is empty.
+
+              </h2>
+
+              <p className="mt-8 text-[#8A7A72]">
+
+                Explore SILVLIN,
+                LIVINGS
+                and Mood Archive.
+
+              </p>
+
+            </div>
+
+          )
+
+        }
+
+        <div className="mt-12 space-y-6">
+
+          {
+
+            items.map((item, index) => {
+
+              const product =
+                products[
+                  item.slug as keyof typeof products
+                ];
+
+              if (!product) return null;
+
+              const images = product.images as any;
+
+              const image =
+
+                images.hero ??
+
+                images.cover ??
+
+                images.product;
+
+              return (
+
+                <div
+                  key={index}
+                  className="
+                  bg-white
+                  border
+                  border-[#D8C7BD]
+                  rounded-[28px]
+                  p-8
+                  "
+                >
+
+                  <div className="flex justify-between">
+
+                    <div className="flex gap-8">
+
+                      <Image
+                        src={image}
+                        alt={product.title}
+                        width={130}
+                        height={130}
+                        className="
+                        rounded-2xl
+                        object-cover
+                        "
+                      />
+
+                      <div>
+
+                        <h2 className="text-2xl font-light">
+
+                          {product.title}
+
+                        </h2>
+
+                        <p className="mt-2 text-[#8A7A72]">
+
+                          {product.category}
+
+                        </p>
+
+                        <p className="mt-5">
+
+                          {product.price.toLocaleString()} KRW
+
+                        </p>
+
+                        <p className="mt-2 text-xs text-[#8A7A72] italic">
+
+                          {
+                            product.category === "Visual Archive"
+
+                              ? "Instant Digital Download"
+
+                              : "Ships in 1–2 business days"
+                          }
+
+                        </p>
+
+                      </div>
+
+                    </div>
+
+                    <button
+
+                      onClick={() => {
+
+                        const updated =
+                          items.filter(
+                            (_, i) =>
+                              i !== index
+                          );
+
+                        updateCart(updated);
+
+                      }}
+
+                      className="
+                      text-sm
+                      text-[#B49A8D]
+                      hover:text-black
+                      transition
+                      "
+
+                    >
+                      Remove
+                    </button>
+
+                  </div>
+
+                  <div className="mt-8 flex items-center gap-6">
+
+                    <button
+
+                      onClick={() => {
+
+                        const updated =
+                          [...items];
+
+                        updated[index].quantity =
+                          Math.max(
+                            1,
+                            updated[index].quantity - 1
+                          );
+
+                        updateCart(updated);
+
+                      }}
+
+                      className="
+                      w-10
+                      h-10
+                      rounded-full
+                      border
+                      border-[#D8C7BD]
+                      "
+
+                    >
+                      −
+                    </button>
+
+                    <span className="text-lg">
+
+                      {item.quantity}
+
+                    </span>
+
+                    <button
+
+                      onClick={() => {
+
+                        const updated =
+                          [...items];
+
+                        updated[index].quantity++;
+
+                        updateCart(updated);
+
+                      }}
+
+                      className="
+                      w-10
+                      h-10
+                      rounded-full
+                      border
+                      border-[#D8C7BD]
+                      "
+
+                    >
+                      +
+
+                    </button>
+
+                  </div>
+
+                </div>
+
+              );
+
+            })
+
+          }
+
+        </div>
+
+        {
+
+          items.length > 0 && (
+
+            <>
+
+              <div className="mt-16 border-t pt-10">
+
+                <div className="flex justify-between">
+
+                  <span>
+
+                    Subtotal
+
+                  </span>
+
+                  <span>
+
+                    {subtotal.toLocaleString()} KRW
+
+                  </span>
+
+                </div>
+
+                <div className="flex justify-between mt-5">
+
+                  <span>
+
+                   Shipping (Physical Items)
+
+                  </span>
+
+                  <span>
+
+                    {
+
+                      shipping === 0
+
+                        ? "FREE"
+
+                        : `${shipping.toLocaleString()} KRW`
+
+                    }
+
+                  </span>
+
+                </div>
+
+                <div className="flex justify-between mt-8 text-3xl">
+
+                  <span>
+
+                    Total
+
+                  </span>
+
+                  <span>
+
+                    {total.toLocaleString()} KRW
+
+                  </span>
+
+                </div>
+
+              </div>
+
+              <p className="mt-8 text-center text-sm text-[#8A7A72]">
+
+                Digital collections are delivered instantly after purchase.
+                Shipping fees apply only to physical products.
+
+              </p>
+
+              <button
+
+                onClick={() => {
+
+                  localStorage.setItem(
+
+                    "checkout",
+
+                    JSON.stringify(items)
+
+                  );
+
+                  router.push("/checkout");
+
+                }}
+
                 className="
-                p-6
-                bg-white
-                border
-                border-[#D8C7BD]
-                rounded-[24px]
+                mt-12
+                w-full
+                py-5
+                rounded-full
+                bg-[#1E1E1E]
+                text-white
+                hover:opacity-90
+                transition
                 "
+
               >
-                <h2 className="text-2xl">
-                  {product.title}
-                </h2>
 
-                <p className="mt-2 text-[#8A7A72]">
-                  {product.color}
-                </p>
+                Continue to Checkout →
 
-                <p className="mt-4">
-                  {product.price.toLocaleString()} KRW
-                </p>
+              </button>
 
-                <div className="mt-6 flex items-center gap-4">
+            </>
 
-                <button
-                  onClick={() => {
+          )
 
-                    const updated = [...items];
-
-                    updated[index].quantity =
-                      Math.max(
-                        1,
-                        updated[index].quantity - 1
-                      );
-
-                    setItems(updated);
-
-                    localStorage.setItem(
-                      "cart",
-                      JSON.stringify(updated)
-                    );
-
-                  }}
-                  className="
-                  w-8
-                  h-8
-                  rounded-full
-                  border
-                  border-[#D8C7BD]
-                  "
-                >
-                  −
-                </button>
-
-                <span>
-                  {item.quantity}
-                </span>
-
-                <button
-                  onClick={() => {
-
-                    const updated = [...items];
-
-                    updated[index].quantity += 1;
-
-                    setItems(updated);
-
-                    localStorage.setItem(
-                      "cart",
-                      JSON.stringify(updated)
-                    );
-
-                  }}
-                  className="
-                  w-8
-                  h-8
-                  rounded-full
-                  border
-                  border-[#D8C7BD]
-                  "
-                >
-                  +
-                </button>
-
-                <button
-                  onClick={() => {
-
-                    const updated =
-                      items.filter(
-                        (_, i) => i !== index
-                      );
-
-                    setItems(updated);
-
-                    localStorage.setItem(
-                      "cart",
-                      JSON.stringify(updated)
-                    );
-
-                  }}
-                  className="
-                  ml-4
-                  text-sm
-                  text-[#B49A8D]
-                  "
-                >
-                  Remove
-                </button>
-
-              </div>
-              </div>
-            );
-          })}
-
-        </div>
-
-        <div className="mt-12">
-
-          <p
-            className="
-            text-sm
-            uppercase
-            tracking-[0.2em]
-            text-[#B49A8D]
-            "
-          >
-            Total
-          </p>
-
-          <h2 className="mt-4 text-5xl font-light">
-            {totalAmount.toLocaleString()} KRW
-          </h2>
-
-        </div>
-
-        <button
-          onClick={payment}
-          className="
-          mt-8
-          px-8
-          py-4
-          rounded-full
-          bg-[#1E1E1E]
-          text-white
-          "
-        >
-          Checkout
-        </button>
+        }
 
       </section>
 
     </main>
+
   );
+
 }

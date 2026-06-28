@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { silvlin } from "@/app/store/data/silvlin";
+import { useRouter } from "next/navigation";
 
 type ProductProps = {
   product: {
@@ -30,6 +31,8 @@ export default function ProductClient({
   product,
 }: ProductProps) {
   const [quantity, setQuantity] = useState(1);
+  const router = useRouter();
+
 
   const relatedProducts =
   Object.entries(silvlin)
@@ -277,8 +280,18 @@ export default function ProductClient({
         </p>
 
         <p className="mt-2">
-            Earrings
+            {product.category}
         </p>
+        </div>
+
+        <div>
+          <p className="text-[#B49A8D]">
+            Color
+          </p>
+
+          <p className="mt-2">
+            {product.color}
+          </p>
         </div>
 
         <div>
@@ -378,6 +391,33 @@ export default function ProductClient({
                 "
               >
                 Add To Cart
+              </button>
+
+              <button
+                onClick={() => {
+
+                  localStorage.setItem(
+                    "checkout",
+                    JSON.stringify([
+                      {
+                        slug: product.slug,
+                        quantity,
+                      },
+                    ])
+                  );
+
+                  router.push("/checkout");
+
+                }}
+                className="
+                  px-8
+                  py-4
+                  rounded-full
+                  bg-[#DDBB6A]
+                  text-black
+                "
+              >
+                Buy Now
               </button>
 
               <Link
