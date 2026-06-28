@@ -172,6 +172,7 @@ export default function MAProductClient({
           alt={product.title}
           width={1600}
           height={1600}
+          draggable={false}
           priority
           className="
           w-full
@@ -242,6 +243,7 @@ export default function MAProductClient({
                 alt={`${product.title} ${index + 1}`}
                 width={1200}
                 height={1200}
+                draggable={false}
                 className="
                 rounded-[30px]
                 object-cover

@@ -72,6 +72,7 @@ export default function ProductClient({
         alt={product.title}
         width={1600}
         height={1600}
+        draggable={false}
         className="w-full rounded-[40px]"
       />
 
@@ -110,6 +111,7 @@ export default function ProductClient({
           alt={`${product.title} Lifestyle`}
           width={1600}
           height={1600}
+          draggable={false}
           className="w-full rounded-[40px] object-cover"
         />
 
@@ -124,6 +126,7 @@ export default function ProductClient({
           alt={`${product.title} Texture`}
           width={1600}
           height={1600}
+          draggable={false}
           className="w-full rounded-[40px] object-cover"
         />
 
@@ -222,6 +225,7 @@ export default function ProductClient({
         alt=""
         width={1200}
         height={1200}
+        draggable={false}
         className="rounded-[40px]"
         />
 
@@ -230,6 +234,7 @@ export default function ProductClient({
         alt=""
         width={1200}
         height={1200}
+        draggable={false}
         className="rounded-[40px]"
         />
 
@@ -464,6 +469,7 @@ export default function ProductClient({
             alt={item.title}
             width={600}
             height={600}
+            draggable={false}
             className="
               w-full
               rounded-[24px]

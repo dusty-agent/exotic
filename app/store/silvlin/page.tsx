@@ -123,6 +123,7 @@ export default function SilvlinPage() {
                 alt={product.title}
                 width={1200}
                 height={1200}
+                draggable={false}
                 className="
                 w-full
                 rounded-[32px]

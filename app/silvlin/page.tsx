@@ -90,6 +90,7 @@ export default function SilvlinPage() {
           alt="SILVLIN Collection"
           width={1600}
           height={900}
+          draggable={false}
           priority
           className="
             w-full

@@ -64,6 +64,7 @@ return (
             alt="STONIN Collection"
             width={1600}
             height={900}
+            draggable={false}
             priority
             className="
               mb-28
@@ -153,6 +154,7 @@ return (
     alt="STONIN Archive"
     width={1600}
     height={900}
+    draggable={false}
     priority
     className="
     mb-28

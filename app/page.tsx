@@ -13,6 +13,7 @@ export default function Home() {
           alt="Exotic Ordinary"
           width={1600}
           height={900}
+          draggable={false}
           priority
           className="
           w-full

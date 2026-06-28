@@ -33,6 +33,7 @@ export default function OrderSummary({
                 alt={product.title}
                 width={140}
                 height={140}
+                draggable={false}
                 className="rounded-[24px] object-cover"
               />
 

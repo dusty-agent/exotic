@@ -209,6 +209,7 @@ export default function CartPage() {
                         alt={product.title}
                         width={130}
                         height={130}
+                        draggable={false}
                         className="
                         rounded-2xl
                         object-cover

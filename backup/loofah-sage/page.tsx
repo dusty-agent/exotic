@@ -61,6 +61,7 @@ export default function LoofahPage() {
   alt={product.title}
   width={1600}
   height={1600}
+  draggable={false}
   className="
   w-full
   rounded-[40px]
@@ -160,6 +161,7 @@ export default function LoofahPage() {
   alt={`${product.title} Lifestyle`}
   width={1600}
   height={1600}
+  draggable={false}
   className="
   w-full
   rounded-[40px]
@@ -177,6 +179,7 @@ export default function LoofahPage() {
   alt={`${product.title} Texture`}
   width={1600}
   height={1600}
+  draggable={false}
   className="
   w-full
   rounded-[40px]

@@ -61,6 +61,7 @@ export default function LivingsPage() {
     alt={product.title}
     width={1200}
     height={1200}
+    draggable={false}
   />
 
   <div>

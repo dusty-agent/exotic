@@ -86,6 +86,7 @@ export default function MoodArchivePage() {
                 <Image
                   src={collection.images.cover}
                   alt={collection.title}
+                  draggable={false}
                   fill
                   className="
                   object-cover

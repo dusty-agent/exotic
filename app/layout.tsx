@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import DisableContextMenu from "../components/DisableContextMenu";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -63,6 +63,7 @@ export default function RootLayout({
         antialiased
         "
       >
+        <DisableContextMenu />
 
         <Script
           src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"

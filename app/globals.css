@@ -141,3 +141,18 @@ img {
   color: #8a7a72;
   margin-top: 0.75rem;
 }
+
+/* Prevent image drag */
+
+img {
+  -webkit-user-drag: none;
+}
+
+/* Prevent text selection */
+
+img,
+video,
+canvas {
+  user-select: none;
+  -webkit-user-select: none;
+}
