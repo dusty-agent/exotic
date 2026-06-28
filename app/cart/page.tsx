@@ -135,8 +135,12 @@ export default function CartPage() {
         </p>
 
         <h1 className="mt-6 text-6xl font-light">
-          Cart
+          장바구니
         </h1>
+
+        <p className="mt-3 text-[#8A7A72] italic">
+          Shopping Cart
+        </p>
 
         {
 
@@ -146,15 +150,14 @@ export default function CartPage() {
 
               <h2 className="text-5xl font-light">
 
-                Your cart is empty.
+              장바구니가 비어 있습니다.
 
               </h2>
 
               <p className="mt-8 text-[#8A7A72]">
 
-                Explore SILVLIN,
-                LIVINGS
-                and Mood Archive.
+              SILVLIN, LIVINGS, MOOD ARCHIVE의
+              다양한 상품을 만나보세요.
 
               </p>
 
@@ -226,7 +229,13 @@ export default function CartPage() {
 
                         <p className="mt-2 text-[#8A7A72]">
 
-                          {product.category}
+                          {product.category === "Visual Archive"
+                            ? "비주얼 아카이브"
+                            : product.category === "925 Silver"
+                            ? "925 실버"
+                            : product.category === "Exotic Livings"
+                            ? "리빙"
+                            : product.category}
 
                         </p>
 
@@ -241,9 +250,8 @@ export default function CartPage() {
                           {
                             product.category === "Visual Archive"
 
-                              ? "Instant Digital Download"
-
-                              : "Ships in 1–2 business days"
+                              ? "결제 후 즉시 다운로드"
+                              : "영업일 기준 1~2일 내 배송"
                           }
 
                         </p>
@@ -274,7 +282,7 @@ export default function CartPage() {
                       "
 
                     >
-                      Remove
+                      삭제(Remove)
                     </button>
 
                   </div>
@@ -366,7 +374,7 @@ export default function CartPage() {
 
                   <span>
 
-                    Subtotal
+                    상품금액(Subtotal)
 
                   </span>
 
@@ -382,7 +390,7 @@ export default function CartPage() {
 
                   <span>
 
-                   Shipping (Physical Items)
+                   배송비(Shipping(Physical Items))
 
                   </span>
 
@@ -392,7 +400,7 @@ export default function CartPage() {
 
                       shipping === 0
 
-                        ? "FREE"
+                        ? "무료"
 
                         : `${shipping.toLocaleString()} KRW`
 
@@ -406,7 +414,7 @@ export default function CartPage() {
 
                   <span>
 
-                    Total
+                    총 결제금액(Total)
 
                   </span>
 
@@ -422,6 +430,8 @@ export default function CartPage() {
 
               <p className="mt-8 text-center text-sm text-[#8A7A72]">
 
+                디지털 상품은 결제 완료 후 즉시 다운로드하실 수 있으며,
+                배송비는 실물 상품 구매 시에만 적용됩니다. <br/>
                 Digital collections are delivered instantly after purchase.
                 Shipping fees apply only to physical products.
 
@@ -456,7 +466,7 @@ export default function CartPage() {
 
               >
 
-                Continue to Checkout →
+                주문하기(Continue to Checkout) →
 
               </button>
 

@@ -75,13 +75,13 @@ export default function Footer() {
 <div className="mt-24 pt-12 border-t border-[#E3D0CC]">
 
   <p className="text-sm uppercase tracking-[0.2em] text-[#B49A8D]">
-    CONNECT
+    고객센터
   </p>
 
   <div className="mt-6 flex flex-col gap-3">
 
     <a
-      href="https://pf.kakao.com/"
+      href="https://pf.kakao.com/_pzdCxb"
       target="_blank"
       rel="noopener noreferrer"
       className="hover:opacity-70 transition"
@@ -116,7 +116,7 @@ export default function Footer() {
 <div className="mt-24 pt-12 border-t border-[#E3D0CC]">
 
   <p className="text-sm uppercase tracking-[0.2em] text-[#B49A8D]">
-    COMPANY
+   사업자정보
   </p>
 
   <div
@@ -132,45 +132,45 @@ export default function Footer() {
   >
 
     <p>
-      Company Name : DRAFT House®
+      상호명 : 드래프트(draft)
     </p>
 
     <p>
-      CEO : So Young Jang
+      대표자 : 장소영
     </p>
 
     <p>
-      Business Registration No : 756-66-00303
+      사업자등록번호 : 756-66-00303
     </p>
 
     <p>
-      Mail-order License : 2020-서울양천-0014
+      통신판매업신고번호 : 2020-서울양천-0014
     </p>
 
     <p>
-      Personal Information Manager : So Young Jang
+      개인정보관리책임자 : 장소영
     </p>
 
     <div className="pt-2">
 
-      <p>Address :</p>
+      <p>사업장 주소 :</p>
 
-      <p>114, A Arcade</p>
+      <p>서울특별시 양천구</p>
 
-      <p>340 Mokdongseo-ro</p>
+      <p>목동서로 340</p>
 
-      <p>Yangcheon-gu, Seoul</p>
+      <p>9단지 A상가 114호</p>
 
-      <p>Republic of Korea</p>
+      <p>디 이그조틱 부띠끄</p>
 
     </div>
 
     <p>
-      Email : exoticordinary@gmail.com
+      이메일 : exoticordinary@gmail.com
     </p>
 
     <p>
-      Customer Support : KakaoTalk Channel
+      고객센터 : KakaoTalk Channel
     </p>
 
   </div>
@@ -193,21 +193,21 @@ export default function Footer() {
       href="/terms"
       className="hover:opacity-70 transition"
     >
-      Terms of Service →
+      이용약관(Terms of Service) →
     </a>
 
     <a
       href="/privacy"
       className="hover:opacity-70 transition"
     >
-      Privacy Policy →
+      개인정보처리방침(Privacy Policy) →
     </a>
 
     <a
       href="/shipping"
       className="hover:opacity-70 transition"
     >
-      Shipping & Returns →
+      배송 및 교환/환불(Shipping & Returns) →
     </a>
 
   </div>
@@ -225,7 +225,7 @@ export default function Footer() {
   </p>
 
   <p className="mt-6 font-medium">
-    So Young Jang
+    장 소 영
   </p>
 
   <p className="mt-2 text-[#8A7A72]">
@@ -263,7 +263,7 @@ export default function Footer() {
       rel="noopener noreferrer"
       className="hover:opacity-70 transition"
     >
-      Exotic Ordinary →
+      이그조틱오디너리(Exotic Ordinary) →
     </a>
 
     <a
@@ -272,7 +272,7 @@ export default function Footer() {
       rel="noopener noreferrer"
       className="hover:opacity-70 transition"
     >
-      Dusty Draft →
+      더스티드래프트(Dusty Draft) →
     </a>
 
     <a
@@ -281,7 +281,7 @@ export default function Footer() {
       rel="noopener noreferrer"
       className="hover:opacity-70 transition"
     >
-      ASSETPICKER →
+      에셋피커(ASSETPICKER) →
     </a>
 
   </div>

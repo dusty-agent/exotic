@@ -11,46 +11,42 @@ export default function Agreement({
 
     <section className="mt-16">
 
-      <label className="flex gap-3">
+        <label className="flex items-start gap-3">
 
         <input
           type="checkbox"
           checked={privacy}
-          onChange={()=>
-            setPrivacy(!privacy)
-          }
+          onChange={(e)=>setPrivacy(e.target.checked)}
         />
 
-        <span>
+        <span className="text-sm leading-6">
 
-          I agree to the collection and use of personal information.
+          개인정보 수집 및 이용에 동의합니다.
 
-          <Link
+          <a
             href="/privacy"
-            className="underline ml-2"
+            className="ml-1 underline text-[#8A7A72]"
           >
-            Privacy Policy
-          </Link>
+            (개인정보처리방침)
+          </a>
 
         </span>
 
-      </label>
+        </label>
 
-      <label className="flex gap-3 mt-6">
+        <label className="flex items-start gap-3">
 
-        <input
-          type="checkbox"
-          checked={age}
-          onChange={()=>
-            setAge(!age)
-          }
-        />
+          <input
+            type="checkbox"
+            checked={age}
+            onChange={(e)=>setAge(e.target.checked)}
+          />
 
-        <span>
-          I confirm that I am at least 14 years old.
-        </span>
+          <span className="text-sm leading-6">
+            만 14세 이상이며 이용약관에 동의합니다.
+          </span>
 
-      </label>
+          </label>
 
     </section>
 

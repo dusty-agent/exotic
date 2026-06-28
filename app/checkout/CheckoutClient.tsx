@@ -33,6 +33,9 @@ export default function CheckoutClient() {
       memo: "",
       newsletter: false,
     });
+  
+  const [paymentMethod, setPaymentMethod] =
+  useState("card");
 
   const [privacy, setPrivacy] =
     useState(false);
@@ -145,7 +148,7 @@ export default function CheckoutClient() {
     clientId:
       process.env.NEXT_PUBLIC_NICE_CLIENT_KEY,
 
-    method: "card",
+    method: paymentMethod,
 
     orderId:
       `EO-${Date.now()}`,
@@ -153,10 +156,10 @@ export default function CheckoutClient() {
     amount:
       total + shipping,
 
-    goodsName:
+      goodsName:
       products.length === 1
         ? products[0].title
-        : `Exotic Ordinary (${products.length} items)`,
+        : `상품 ${products.length}건`,
 
     returnUrl:
       `${window.location.origin}/api/payments/approve`,
@@ -184,12 +187,12 @@ export default function CheckoutClient() {
         </p>
 
         <h1 className="mt-6 text-6xl font-light">
-          Checkout
-        </h1>
+        체크아웃
+      </h1>
 
-        <p className="mt-4 text-[#8A7A72] italic">
-          Beauty in the Mirror.
-        </p>
+      <p className="mt-4 text-[#8A7A72] italic">
+        Checkout
+      </p>
 
         <div className="grid lg:grid-cols-2 gap-20 mt-20">
 
@@ -215,6 +218,141 @@ export default function CheckoutClient() {
               hasPhysicalItem={hasPhysicalItem}
             />
 
+
+            <section className="mt-14">
+
+            <h2 className="text-2xl font-light flex items-end gap-3">
+
+              <span>
+                결제수단
+              </span>
+
+              <span className="text-base text-[#8A7A72] font-normal">
+                Payment Method
+              </span>
+
+            </h2>
+            <p className="mt-3 mb-8 text-sm text-[#8A7A72]">
+
+              원하시는 결제수단을 선택해주세요.
+
+              <span className="ml-2 italic">
+
+              (Select your preferred payment method.)
+
+              </span>
+
+            </p>
+            <div className="mt-8 space-y-4">
+
+              <label
+                className="
+                flex
+                items-center
+                gap-4
+                border
+                border-[#D8C7BD]
+                rounded-2xl
+                p-5
+                cursor-pointer
+                "
+              >
+
+                <input
+                  type="radio"
+                  name="payment"
+                  value="card"
+                  checked={paymentMethod === "card"}
+                  onChange={() =>
+                    setPaymentMethod("card")
+                  }
+                />
+
+              <div>
+
+              <div className="font-medium">
+                실시간 계좌이체
+              </div>
+
+              <div className="text-sm text-[#8A7A72] mt-1">
+                Bank Transfer
+              </div>
+
+              </div>
+
+              </label>
+
+              <label
+                className="
+                flex
+                items-center
+                gap-4
+                border
+                border-[#D8C7BD]
+                rounded-2xl
+                p-5
+                cursor-pointer
+                "
+              >
+
+                <input
+                  type="radio"
+                  name="payment"
+                  value="bank"
+                  checked={paymentMethod === "bank"}
+                  onChange={() =>
+                    setPaymentMethod("bank")
+                  }
+                />
+
+                <span>
+                  실시간 계좌이체
+                </span>
+
+              </label>
+
+              <label
+                className="
+                flex
+                items-center
+                gap-4
+                border
+                border-[#D8C7BD]
+                rounded-2xl
+                p-5
+                cursor-pointer
+                "
+              >
+
+                <input
+                  type="radio"
+                  name="payment"
+                  value="vbank"
+                  checked={paymentMethod === "vbank"}
+                  onChange={() =>
+                    setPaymentMethod("vbank")
+                  }
+                />
+
+                <div>
+
+                <div className="font-medium">
+                  가상계좌
+                </div>
+
+                <div className="text-sm text-[#8A7A72] mt-1">
+                  Virtual Account
+                </div>
+
+                </div>
+
+              </label>
+
+            </div>
+
+            </section>
+
+
             <Agreement
               privacy={privacy}
               age={age}
@@ -232,10 +370,22 @@ export default function CheckoutClient() {
               rounded-full
               bg-[#1E1E1E]
               text-white
-              disabled:opacity-30
+              hover:bg-[#000000]
+              transition
+              disabled:opacity-30disabled:opacity-30
               "
             >
-              Proceed to Payment →
+              <div className="flex flex-col items-center">
+
+              <span className="text-base font-medium">
+                결제하기
+              </span>
+
+              <span className="text-xs mt-1 opacity-70">
+                Proceed to Payment →
+              </span>
+
+              </div>
             </button>
 
           </div>
