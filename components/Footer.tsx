@@ -173,7 +173,7 @@ export default function Footer() {
     </p>
 
     <p>
-      고객센터 : KakaoTalk Channel
+      고객센터 : 02-2646-5368 | KakaoTalk Channel
     </p>
 
   </div>
