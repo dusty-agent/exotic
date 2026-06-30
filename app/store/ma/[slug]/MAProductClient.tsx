@@ -87,7 +87,12 @@ export default function MAProductClient({
           hover:underline
           "
         >
-          ← Mood Archive
+          ← 컬렉션으로 돌아가기
+
+          <div className="text-xs italic mt-1">
+          Back to Collections
+          </div>
+
         </Link>
 
         <h1
@@ -126,7 +131,10 @@ export default function MAProductClient({
           <div>
 
             <p className="text-sm uppercase tracking-[0.2em] text-[#B49A8D]">
+              이미지
+              <span className="block text-xs italic mt-1">
               Images
+              </span>
             </p>
 
             <h3 className="mt-2 text-3xl font-light">
@@ -138,7 +146,10 @@ export default function MAProductClient({
           <div>
 
             <p className="text-sm uppercase tracking-[0.2em] text-[#B49A8D]">
+              파일 형식
+              <span className="block text-xs italic mt-1">
               Format
+              </span>
             </p>
 
             <h3 className="mt-2 text-3xl font-light">
@@ -150,7 +161,10 @@ export default function MAProductClient({
           <div>
 
             <p className="text-sm uppercase tracking-[0.2em] text-[#B49A8D]">
+              가격
+              <span className="block text-xs italic mt-1">
               Price
+              </span>
             </p>
 
             <h3 className="mt-2 text-3xl font-light">
@@ -195,7 +209,11 @@ export default function MAProductClient({
           text-[#B49A8D]
           "
         >
+          스토리
+
+          <div className="text-xs italic mt-2">
           Story
+          </div>
         </p>
 
         <p
@@ -206,14 +224,27 @@ export default function MAProductClient({
           text-[#6D5D56]
           "
         >
+          이 컬렉션은
+          분위기와 기억,
+          질감과 조용한 감정을
+          기록하며 시작되었습니다.
+
+          순간의 감각을
+          시간이 지나도 남을
+          시각적 경험으로
+          보존합니다.
+
+          <br /><br />
+
+          <span className="italic">
+
           Every Mood Archive begins as
           an exploration of atmosphere,
           memory,
           texture,
           and quiet emotions.
-          This collection captures fleeting
-          moments transformed into
-          timeless visual experiences.
+
+          </span>
         </p>
 
       </section>
@@ -280,242 +311,368 @@ export default function MAProductClient({
             text-[#B49A8D]
             "
           >
-            Included
+            포함 항목
+
+          <div className="text-xs italic mt-2">
+          Included
+          </div>
           </p>
 
-          <div className="mt-10 space-y-5 text-lg">
+         <div className="mt-10 space-y-5 text-lg">
 
-            <p>✓ {product.count} High Resolution Images</p>
+            <p>
+              ✓ 고해상도 이미지 {product.count}장
+              <span className="block text-sm text-[#8A7A72]">
+                High Resolution Images
+              </span>
+            </p>
 
-            <p>✓ Desktop Wallpaper</p>
+            <p>
+              ✓ 데스크톱 배경화면
+              <span className="block text-sm text-[#8A7A72]">
+                Desktop Wallpaper
+              </span>
+            </p>
 
-            <p>✓ Mobile Wallpaper</p>
+            <p>
+              ✓ 모바일 배경화면
+              <span className="block text-sm text-[#8A7A72]">
+                Mobile Wallpaper
+              </span>
+            </p>
 
-            <p>✓ PNG Format</p>
+            <p>
+              ✓ PNG 파일
+              <span className="block text-sm text-[#8A7A72]">
+                PNG Format
+              </span>
+            </p>
 
-            <p>✓ Personal License</p>
+            <p>
+              ✓ 개인 이용 라이선스
+              <span className="block text-sm text-[#8A7A72]">
+                Personal License
+              </span>
+            </p>
 
-            <p>✓ Instant Download after Payment</p>
+            <p>
+              ✓ 결제 후 즉시 다운로드
+              <span className="block text-sm text-[#8A7A72]">
+                Instant Download after Payment
+              </span>
+            </p>
+
+            <p>
+              ✓ 결제일로부터 3개월 동안 다운로드 가능
+              <span className="block text-sm text-[#8A7A72]">
+                Download available for 3 months from the payment date
+              </span>
+            </p>
 
           </div>
 
-        </div>
-
-      </section>
-
-      {/* SUPPORT */}
-
-      <section className="max-w-4xl mx-auto px-8">
-
-        <div
-          className="
-          rounded-[36px]
-          bg-white
-          border
-          border-[#D8C7BD]
-          p-12
-          "
-        >
-
-          <p
-            className="
-            uppercase
-            tracking-[0.25em]
-            text-sm
-            text-[#B49A8D]
-            "
-          >
-            Support Mood Archive
-          </p>
-
-          <h2
-            className="
-            mt-6
-            text-5xl
-            font-light
-            "
-          >
-            {product.price.toLocaleString()} KRW
-          </h2>
-
-          <p
-            className="
-            mt-8
-            max-w-xl
-            leading-8
-            text-[#8A7A72]
-            "
-          >
-            Every purchase supports the creation
-            of new visual archives,
-            ambient music,
-            and future collections.
-
-            <br />
-            <br />
-
-            Think of it as buying
-            the next cup of coffee
-            for Exotic Ordinary.
-          </p>
-
-          <div
-            className="
-            mt-12
-            flex
-            flex-col
-            md:flex-row
-            gap-5
-            "
-          >
-
-            <button
-              onClick={addToCart}
-              className="
-              flex-1
-              py-5
-              rounded-full
-              border
-              border-[#D8C7BD]
-              hover:bg-black
-              hover:text-white
-              transition
-              "
-            >
-              Add to Cart
-            </button>
-
-            <button
-              onClick={buyNow}
-              className="
-              flex-1
-              py-5
-              rounded-full
-              bg-black
-              text-white
-              hover:opacity-90
-              transition
-              "
-            >
-              Buy Collection
-            </button>
-
           </div>
 
+          </section>
+
+          {/* SUPPORT */}
+
+          <section className="max-w-4xl mx-auto px-8">
+
+            <div
+              className="
+              rounded-[36px]
+              bg-white
+              border
+              border-[#D8C7BD]
+              p-12
+              "
+            >
+
+              <p
+                className="
+                uppercase
+                tracking-[0.25em]
+                text-sm
+                text-[#B49A8D]
+                "
+              >
+
+                무드 아카이브 후원
+
+                <span className="block mt-2 text-xs italic tracking-normal">
+                  Support Mood Archive
+                </span>
+
+              </p>
+
+              <h2
+                className="
+      mt-6
+      text-5xl
+      font-light
+      "
+    >
+      {product.price.toLocaleString()} KRW
+    </h2>
+
+    <p
+      className="
+      mt-8
+      max-w-xl
+      leading-8
+      text-[#8A7A72]
+      "
+    >
+
+      여러분의 구매는
+      새로운 이미지,
+      앰비언트 음악,
+      그리고 다음 컬렉션을
+      만드는 데 사용됩니다.
+
+      <br />
+      <br />
+
+      작은 후원이
+      EXOTIC ORDINARY의
+      다음 작업으로 이어집니다.
+
+      <br />
+      <br />
+
+      디지털 다운로드 상품은
+      결제일로부터
+      <strong>3개월 동안</strong>
+      다운로드 가능합니다.
+
+      <br />
+      <br />
+
+      <span className="italic">
+
+        Every purchase supports
+        the creation of future
+        visual archives,
+        ambient music
+        and new collections.
+
+      </span>
+
+    </p>
+
+    <div
+      className="
+      mt-12
+      flex
+      flex-col
+      md:flex-row
+      gap-5
+      "
+    >
+
+      <button
+        onClick={addToCart}
+        className="
+        flex-1
+        py-5
+        rounded-full
+        border
+        border-[#D8C7BD]
+        hover:bg-black
+        hover:text-white
+        transition
+        "
+      >
+
+        <div className="flex flex-col items-center">
+
+          <span>
+            장바구니 담기
+          </span>
+
+          <span className="text-xs opacity-70 mt-1">
+            Add to Cart
+          </span>
+
         </div>
 
-      </section>
+      </button>
 
-      {/* EXPLORE */}
+      <button
+        onClick={buyNow}
+        className="
+        flex-1
+        py-5
+        rounded-full
+        bg-black
+        text-white
+        hover:opacity-90
+        transition
+        "
+      >
 
-      <section className="max-w-6xl mx-auto px-8 py-32">
+        <div className="flex flex-col items-center">
 
-        <div
-          className="
-          border-t
-          border-[#D8C7BD]
-          pt-20
-          "
-        >
+          <span>
+            바로 구매하기
+          </span>
 
-          <p
-            className="
-            uppercase
-            tracking-[0.25em]
-            text-sm
-            text-[#B49A8D]
-            "
-          >
-            Continue Exploring
-          </p>
-
-          <div
-            className="
-            mt-12
-            grid
-            md:grid-cols-3
-            gap-8
-            "
-          >
-
-            <Link
-              href="/store/ma"
-              className="
-              rounded-[28px]
-              border
-              border-[#D8C7BD]
-              bg-white
-              p-8
-              hover:shadow-lg
-              transition
-              "
-            >
-              <h3 className="text-2xl font-light">
-                More Collections →
-              </h3>
-
-              <p className="mt-4 text-[#8A7A72]">
-                Explore the complete
-                Mood Archive.
-              </p>
-
-            </Link>
-
-            <Link
-              href="/ma"
-              className="
-              rounded-[28px]
-              border
-              border-[#D8C7BD]
-              bg-white
-              p-8
-              hover:shadow-lg
-              transition
-              "
-            >
-              <h3 className="text-2xl font-light">
-                Mood Archive →
-              </h3>
-
-              <p className="mt-4 text-[#8A7A72]">
-                Visit the archive,
-                music and visual worlds.
-              </p>
-
-            </Link>
-
-            <Link
-              href="/store"
-              className="
-              rounded-[28px]
-              border
-              border-[#D8C7BD]
-              bg-white
-              p-8
-              hover:shadow-lg
-              transition
-              "
-            >
-              <h3 className="text-2xl font-light">
-                Store →
-              </h3>
-
-              <p className="mt-4 text-[#8A7A72]">
-                Discover SILVLIN,
-                LIVINGS
-                and more.
-              </p>
-
-            </Link>
-
-          </div>
+          <span className="text-xs opacity-70 mt-1">
+            Buy Now
+          </span>
 
         </div>
 
-      </section>
+      </button>
 
-    </main>
+    </div>
 
-  );
+  </div>
 
-}
+</section>
+
+{/* EXPLORE */}
+
+<section className="max-w-6xl mx-auto px-8 py-32">
+
+  <div
+    className="
+    border-t
+    border-[#D8C7BD]
+    pt-20
+    "
+  >
+
+    <p
+      className="
+      uppercase
+      tracking-[0.25em]
+      text-sm
+      text-[#B49A8D]
+      "
+    >
+
+      더 둘러보기
+
+      <span className="block mt-2 text-xs italic tracking-normal">
+        Continue Exploring
+      </span>
+
+    </p>
+
+    <div
+      className="
+      mt-12
+      grid
+      md:grid-cols-3
+      gap-8
+      "
+    >
+
+      <Link
+        href="/store/ma"
+        className="
+        rounded-[28px]
+        border
+        border-[#D8C7BD]
+        bg-white
+        p-8
+        hover:shadow-lg
+        transition
+        "
+      >
+
+        <h3 className="text-2xl font-light">
+          더 많은 컬렉션 →
+        </h3>
+
+        <p className="mt-4 text-[#8A7A72]">
+          전체 Mood Archive 컬렉션을 둘러보세요.
+
+          <span className="block mt-3 italic text-sm">
+            Explore the complete Mood Archive.
+          </span>
+
+        </p>
+
+      </Link>
+
+      <Link
+        href="/ma"
+        className="
+        rounded-[28px]
+        border
+        border-[#D8C7BD]
+        bg-white
+        p-8
+        hover:shadow-lg
+        transition
+        "
+      >
+
+        <h3 className="text-2xl font-light">
+          무드 아카이브 소개 →
+        </h3>
+
+        <p className="mt-4 text-[#8A7A72]">
+
+          프로젝트와
+          아카이브 이야기를 만나보세요.
+
+          <span className="block mt-3 italic text-sm">
+
+            Visit the archive,
+            music and visual worlds.
+
+          </span>
+
+        </p>
+
+      </Link>
+
+      <Link
+        href="/store"
+        className="
+        rounded-[28px]
+        border
+        border-[#D8C7BD]
+        bg-white
+        p-8
+        hover:shadow-lg
+        transition
+        "
+      >
+
+        <h3 className="text-2xl font-light">
+          EXOTIC ORDINARY 스토어 →
+        </h3>
+
+        <p className="mt-4 text-[#8A7A72]">
+
+          SILVLIN,
+          LIVINGS,
+          그리고 다양한 컬렉션을 만나보세요.
+
+          <span className="block mt-3 italic text-sm">
+
+            Discover SILVLIN,
+            LIVINGS and more.
+
+          </span>
+
+        </p>
+
+      </Link>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+);
+
+} 

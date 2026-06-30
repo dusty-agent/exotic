@@ -368,107 +368,206 @@ export default function CartPage() {
 
             <>
 
-              <div className="mt-16 border-t pt-10">
+             <div className="mt-16 border-t pt-10">
 
-                <div className="flex justify-between">
+              <div className="flex justify-between">
 
-                  <span>
+                <span>
 
-                    상품금액(Subtotal)
-
+                  상품금액
+                  <span className="ml-2 text-[#8A7A72]">
+                    (Subtotal)
                   </span>
 
-                  <span>
+                </span>
 
-                    {subtotal.toLocaleString()} KRW
+                <span>
 
-                  </span>
+                  {subtotal.toLocaleString()} KRW
 
-                </div>
-
-                <div className="flex justify-between mt-5">
-
-                  <span>
-
-                   배송비(Shipping(Physical Items))
-
-                  </span>
-
-                  <span>
-
-                    {
-
-                      shipping === 0
-
-                        ? "무료"
-
-                        : `${shipping.toLocaleString()} KRW`
-
-                    }
-
-                  </span>
-
-                </div>
-
-                <div className="flex justify-between mt-8 text-3xl">
-
-                  <span>
-
-                    총 결제금액(Total)
-
-                  </span>
-
-                  <span>
-
-                    {total.toLocaleString()} KRW
-
-                  </span>
-
-                </div>
+                </span>
 
               </div>
 
-              <p className="mt-8 text-center text-sm text-[#8A7A72]">
+              <div className="flex justify-between mt-5">
 
-                디지털 상품은 결제 완료 후 즉시 다운로드하실 수 있으며,
-                배송비는 실물 상품 구매 시에만 적용됩니다. <br/>
-                Digital collections are delivered instantly after purchase.
-                Shipping fees apply only to physical products.
+                <span>
+
+                  배송비
+                  <span className="ml-2 text-[#8A7A72]">
+                    (Physical Items Only)
+                  </span>
+
+                </span>
+
+                <span>
+
+                  {
+
+                    shipping === 0
+
+                      ? "FREE"
+
+                      : `${shipping.toLocaleString()} KRW`
+
+                  }
+
+                </span>
+
+              </div>
+
+              <div className="flex justify-between mt-8 text-3xl">
+
+                <span>
+
+                  총 결제금액
+                  <span className="ml-2 text-lg text-[#8A7A72] font-normal">
+                    (Total)
+                  </span>
+
+                </span>
+
+                <span>
+
+                  {total.toLocaleString()} KRW
+
+                </span>
+
+              </div>
+
+            </div>
+
+            <p
+              className="
+              mt-8
+              text-center
+              text-sm
+              leading-7
+              text-[#8A7A72]
+              "
+            >
+
+              디지털 상품은 결제 완료 후 즉시 다운로드할 수 있으며,
+              배송비는 실물 상품 구매 시에만 적용됩니다.
+
+              <br />
+
+              Digital collections are delivered instantly after purchase.
+              Shipping fees apply only to physical products.
+
+            </p>
+
+            <div
+              className="
+              mt-10
+              border-t
+              border-[#D8C7BD]
+              pt-8
+              "
+            >
+
+              <p
+                className="
+                uppercase
+                tracking-[0.2em]
+                text-xs
+                text-[#B49A8D]
+                "
+              >
+                DIGITAL DOWNLOAD
+              </p>
+
+              <p
+                className="
+                mt-5
+                text-sm
+                leading-7
+                text-[#8A7A72]
+                "
+              >
+
+                Mood Archive 디지털 상품은
+                <strong className="text-black">
+                  {" "}
+                  결제일로부터 3개월 동안 다운로드 가능합니다.
+                </strong>
+
+                <br />
+
+                다운로드 가능 기간 종료 후
+                다운로드 링크는 자동으로 만료됩니다.
+
+                <br />
+                <br />
+
+                <span className="italic">
+
+                  Mood Archive digital products remain
+                  available for download for
+                  <strong className="text-black">
+                    {" "}
+                    3 months
+                  </strong>
+                  {" "}
+                  from the payment date.
+
+                  <br />
+
+                  Download access automatically expires
+                  after the 3-month service period.
+
+                </span>
 
               </p>
 
-              <button
+            </div>
 
-                onClick={() => {
+            <button
 
-                  localStorage.setItem(
+              onClick={() => {
 
-                    "checkout",
+                localStorage.setItem(
 
-                    JSON.stringify(items)
+                  "checkout",
 
-                  );
+                  JSON.stringify(items)
 
-                  router.push("/checkout");
+                );
 
-                }}
+                router.push("/checkout");
 
-                className="
-                mt-12
-                w-full
-                py-5
-                rounded-full
-                bg-[#1E1E1E]
-                text-white
-                hover:opacity-90
-                transition
-                "
+              }}
 
-              >
+              className="
+              mt-12
+              w-full
+              py-5
+              rounded-full
+              bg-[#1E1E1E]
+              text-white
+              hover:bg-black
+              transition
+              "
 
-                주문하기(Continue to Checkout) →
+            >
 
-              </button>
+              <div className="flex flex-col items-center">
+
+                <span className="font-medium">
+
+                  주문하기
+
+                </span>
+
+                <span className="text-xs opacity-70 mt-1">
+
+                  Continue to Checkout →
+
+                </span>
+
+              </div>
+
+            </button> 
 
             </>
 

@@ -42,12 +42,64 @@ export default function MoodArchivePage() {
           text-[#8A7A72]
           "
         >
+          무드 아카이브의 디지털 컬렉션을 만나보세요.
+
+          <br /><br />
+
+          <span className="italic">
+
           A growing collection of visual atmospheres,
           dreamlike memories,
-          ambient imagery
-          and digital artworks
-          created by Exotic Ordinary.
+          ambient imagery and digital artworks
+          created by EXOTIC ORDINARY.
+
+          </span>
         </p>
+
+        <div
+          className="
+          mt-12
+          rounded-[28px]
+          border
+          border-[#E6D7CF]
+          bg-white
+          p-8
+          "
+        >
+
+          <p className="text-[#8A7A72] leading-8">
+
+            Mood Archive는
+            EXOTIC ORDINARY의
+            디지털 아카이브 프로젝트입니다.
+
+            <br /><br />
+
+            <span className="italic">
+
+              Mood Archive is a digital archive project
+              by EXOTIC ORDINARY.
+
+            </span>
+
+          </p>
+
+          <a
+            href="/ma"
+            className="
+            inline-block
+            mt-8
+            text-[#B49A8D]
+            hover:underline
+            "
+          >
+
+            브랜드 소개 보기
+            (About Mood Archive →)
+
+          </a>
+
+        </div>
 
       </section>
 
