@@ -20,20 +20,20 @@ export const moodArchive = {
       images: {
   
         cover:
-          "/moodArchive/aqua-veil/AQUAVEIL_C_1.png",
+          "/aqua-veil/AQUAVEIL_C_1.png",
   
         gallery: [
   
-          "/moodArchive/aqua-veil/AQUAVEIL_C_1.png",
-          "/moodArchive/aqua-veil/AQUAVEIL_C_2.png",
-          "/moodArchive/aqua-veil/AQUAVEIL_C_3.png",
+          "/aqua-veil/AQUAVEIL_C_1.png",
+          "/aqua-veil/AQUAVEIL_C_2.png",
+          "/aqua-veil/AQUAVEIL_C_3.png",
   
-          "/moodArchive/aqua-veil/AQUAVEIL_R_1.png",
-          "/moodArchive/aqua-veil/AQUAVEIL_R_2.png",
-          "/moodArchive/aqua-veil/AQUAVEIL_R_3.png",
+          "/aqua-veil/AQUAVEIL_R_1.png",
+          "/aqua-veil/AQUAVEIL_R_2.png",
+          "/aqua-veil/AQUAVEIL_R_3.png",
   
         ],
-  
+
       },
   
     },
@@ -58,20 +58,20 @@ export const moodArchive = {
       images: {
   
         cover:
-          "/moodArchive/blush-peony/BLUSHPEONY_C_1.png",
+          "/blush-peony/BLUSHPEONY_C_1.png",
   
         gallery: [
   
-          "/moodArchive/blush-peony/BLUSHPEONY_C_1.png",
-          "/moodArchive/blush-peony/BLUSHPEONY_C_2.png",
-          "/moodArchive/blush-peony/BLUSHPEONY_C_3.png",
+          "/blush-peony/BLUSHPEONY_C_1.png",
+          "/blush-peony/BLUSHPEONY_C_2.png",
+          "/blush-peony/BLUSHPEONY_C_3.png",
   
-          "/moodArchive/blush-peony/BLUSHPEONY_R_1.png",
-          "/moodArchive/blush-peony/BLUSHPEONY_R_2.png",
-          "/moodArchive/blush-peony/BLUSHPEONY_R_3.png",
+          "/blush-peony/BLUSHPEONY_R_1.png",
+          "/blush-peony/BLUSHPEONY_R_2.png",
+          "/blush-peony/BLUSHPEONY_R_3.png",
   
         ],
-  
+
       },
   
     },
@@ -96,20 +96,20 @@ export const moodArchive = {
       images: {
   
         cover:
-          "/moodArchive/greenery-mist/GREENARYMIST_C_1.png",
+          "/greenery-mist/GREENARYMIST_C_1.png",
   
         gallery: [
   
-          "/moodArchive/greenery-mist/GREENARYMIST_C_1.png",
-          "/moodArchive/greenery-mist/GREENARYMIST_C_2.png",
-          "/moodArchive/greenery-mist/GREENARYMIST_C_3.png",
+          "/greenery-mist/GREENARYMIST_C_1.png",
+          "/greenery-mist/GREENARYMIST_C_2.png",
+          "/greenery-mist/GREENARYMIST_C_3.png",
   
-          "/moodArchive/greenery-mist/GREENARYMIST_R_1.png",
-          "/moodArchive/greenery-mist/GREENARYMIST_R_2.png",
-          "/moodArchive/greenery-mist/GREENARYMIST_R_3.png",
+          "/greenery-mist/GREENARYMIST_R_1.png",
+          "/greenery-mist/GREENARYMIST_R_2.png",
+          "/greenery-mist/GREENARYMIST_R_3.png",
   
         ],
-  
+
       },
   
     },
@@ -134,20 +134,20 @@ export const moodArchive = {
       images: {
   
         cover:
-          "/moodArchive/petal-memory/PETALMEMORY_C_1.png",
+          "/petal-memory/PETALMEMORY_C_1.png",
   
         gallery: [
   
-          "/moodArchive/petal-memory/PETALMEMORY_C_1.png",
-          "/moodArchive/petal-memory/PETALMEMORY_C_2.png",
-          "/moodArchive/petal-memory/PETALMEMORY_C_3.png",
+          "/petal-memory/PETALMEMORY_C_1.png",
+          "/petal-memory/PETALMEMORY_C_2.png",
+          "/petal-memory/PETALMEMORY_C_3.png",
   
-          "/moodArchive/petal-memory/PETALMEMORY_R_1.png",
-          "/moodArchive/petal-memory/PETALMEMORY_R_2.png",
-          "/moodArchive/petal-memory/PETALMEMORY_R_3.png",
+          "/petal-memory/PETALMEMORY_R_1.png",
+          "/petal-memory/PETALMEMORY_R_2.png",
+          "/petal-memory/PETALMEMORY_R_3.png",
   
         ],
-  
+
       },
   
     },
@@ -172,20 +172,20 @@ export const moodArchive = {
       images: {
   
         cover:
-          "/moodArchive/white-musk/WHITEMUSK_C_1.png",
+          "/white-musk/WHITEMUSK_C_1.png",
   
         gallery: [
   
-          "/moodArchive/white-musk/WHITEMUSK_C_1.png",
-          "/moodArchive/white-musk/WHITEMUSK_C_2.png",
-          "/moodArchive/white-musk/WHITEMUSK_C_3.png",
+          "/white-musk/WHITEMUSK_C_1.png",
+          "/white-musk/WHITEMUSK_C_2.png",
+          "/white-musk/WHITEMUSK_C_3.png",
   
-          "/moodArchive/white-musk/WHITEMUSK_R_1.png",
-          "/moodArchive/white-musk/WHITEMUSK_R_2.png",
-          "/moodArchive/white-musk/WHITEMUSK_R_3.png",
+          "/white-musk/WHITEMUSK_R_1.png",
+          "/white-musk/WHITEMUSK_R_2.png",
+          "/white-musk/WHITEMUSK_R_3.png",
   
         ],
-  
+        
       },
   
     },
@@ -210,19 +210,19 @@ export const moodArchive = {
       images: {
   
         cover:
-          "/moodArchive/original-collection/ORIGINALCOLLECTION_C_1.png",
+          "/original-collection/ORIGINALCOLLECTION_C_1.png",
   
         gallery: [
   
-          "/moodArchive/original-collection/ORIGINALCOLLECTION_C_1.png",
-          "/moodArchive/original-collection/ORIGINALCOLLECTION_C_2.png",
-          "/moodArchive/original-collection/ORIGINALCOLLECTION_C_3.png",
-          "/moodArchive/original-collection/ORIGINALCOLLECTION_A_1.png",
-          "/moodArchive/original-collection/ORIGINALCOLLECTION_A_2.png",
-          "/moodArchive/original-collection/ORIGINALCOLLECTION_A_3.png",
+          "/original-collection/ORIGINALCOLLECTION_C_1.png",
+          "/original-collection/ORIGINALCOLLECTION_C_2.png",
+          "/original-collection/ORIGINALCOLLECTION_C_3.png",
+          "/original-collection/ORIGINALCOLLECTION_A_1.png",
+          "/original-collection/ORIGINALCOLLECTION_A_2.png",
+          "/original-collection/ORIGINALCOLLECTION_A_3.png",
   
         ],
-  
+
       },
   
     },

@@ -3,31 +3,17 @@
 import { useEffect } from "react";
 
 export default function DisableContextMenu() {
-
   useEffect(() => {
-
-    const handler = (e: MouseEvent) => {
-
+    const preventContextMenu = (e: Event) => {
       e.preventDefault();
-
     };
 
-    document.addEventListener(
-      "contextmenu",
-      handler
-    );
+    document.addEventListener("contextmenu", preventContextMenu);
 
     return () => {
-
-      document.removeEventListener(
-        "contextmenu",
-        handler
-      );
-
+      document.removeEventListener("contextmenu", preventContextMenu);
     };
-
   }, []);
 
   return null;
-
 }

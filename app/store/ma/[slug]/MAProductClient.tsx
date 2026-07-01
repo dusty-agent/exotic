@@ -167,19 +167,36 @@ export default function MAProductClient({
 
       <section className="max-w-6xl mx-auto px-8 mt-24">
 
-        <Image
-          src={product.images.cover}
-          alt={product.title}
-          width={1600}
-          height={1600}
-          draggable={false}
-          priority
+        <div
           className="
-          w-full
-          rounded-[42px]
-          object-cover
+            w-full
+            aspect-square
+            rounded-[42px]
+            overflow-hidden
+            relative
+            group
           "
-        />
+        >
+          <div
+            className="
+              absolute
+              inset-0
+              bg-cover
+              bg-center
+              bg-no-repeat
+              transition
+              duration-700
+              group-hover:scale-105
+            "
+            style={{
+              backgroundImage: `url(/api/preview${product.images.cover})`,
+            }}
+            onContextMenu={(e) => e.preventDefault()}
+          />
+
+          <div className="absolute inset-0 z-10" />
+
+        </div>
 
       </section>
 
@@ -230,32 +247,53 @@ export default function MAProductClient({
           "
         >
 
-          {product.images.gallery.map(
+          <div
+            className="
+              grid
+              md:grid-cols-2
+              gap-10
+            "
+          >
+            {product.images.gallery.map(
+              (
+                image: string,
+                index: number
+              ) => (
 
-            (
-              image: string,
-              index: number
-            ) => (
+                <div
+                  key={index}
+                  className="
+                    aspect-square
+                    rounded-[30px]
+                    overflow-hidden
+                    relative
+                    group
+                  "
+                >
+                  <div
+                    className="
+                      absolute
+                      inset-0
+                      bg-cover
+                      bg-center
+                      bg-no-repeat
+                      transition
+                      duration-500
+                      group-hover:scale-[1.01]
+                    "
+                    style={{
+                      backgroundImage: `url(/api/preview${image})`,
+                    }}
+                    onContextMenu={(e) => e.preventDefault()}
+                  />
 
-              <Image
-                key={index}
-                src={image}
-                alt={`${product.title} ${index + 1}`}
-                width={1200}
-                height={1200}
-                draggable={false}
-                className="
-                rounded-[30px]
-                object-cover
-                hover:scale-[1.01]
-                transition
-                duration-500
-                "
-              />
+                  <div className="absolute inset-0 z-10" />
 
-            )
+                </div>
 
-          )}
+              )
+            )}
+          </div>  
 
         </div>
 

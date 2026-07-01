@@ -143,6 +143,38 @@ export default function CheckoutClient() {
 
   }
 
+  const order = {
+
+    id: `EO-${Date.now()}`,
+  
+    customer: customer.name,
+  
+    email: customer.email,
+  
+    phone: customer.phone,
+  
+    createdAt: new Date().toISOString(),
+  
+    expiresAt: new Date(
+      Date.now() + 90 * 24 * 60 * 60 * 1000
+    ).toISOString(),
+  
+    items: products.map(product => ({
+      slug: product.slug,
+      title: product.title,
+      quantity: product.quantity,
+      price: product.price,
+    })),
+  
+    total: total + shipping,
+  
+  };
+  
+  localStorage.setItem(
+    "latest-order",
+    JSON.stringify(order)
+  );
+
   AUTHNICE.requestPay({
 
     clientId:
@@ -150,8 +182,7 @@ export default function CheckoutClient() {
 
     method: paymentMethod,
 
-    orderId:
-      `EO-${Date.now()}`,
+    orderId: order.id,
 
     amount:
       total + shipping,
