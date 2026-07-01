@@ -41,7 +41,7 @@ export default function SuccessPage() {
 
     <main className="min-h-screen bg-[#FFFBF8]">
 
-      <section className="max-w-4xl mx-auto px-8 py-24">
+      <section className="max-w-4xl mx-auto px-8 py-28">
 
       <div className="flex flex-col items-center text-center">
 
@@ -67,6 +67,7 @@ export default function SuccessPage() {
           uppercase
           tracking-[0.25em]
           text-[#B49A8D]
+          text-sm
           "
         >
           Payment Complete

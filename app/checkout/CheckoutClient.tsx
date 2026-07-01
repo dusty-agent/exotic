@@ -249,148 +249,152 @@ export default function CheckoutClient() {
               hasPhysicalItem={hasPhysicalItem}
             />
 
-
             <section className="mt-14">
 
-            <h2 className="text-2xl font-light flex items-end gap-3">
+              <h2 className="text-2xl font-light flex items-end gap-3">
 
-              <span>
-                결제수단
-              </span>
+                <span>
+                  결제수단
+                </span>
 
-              <span className="text-base text-[#8A7A72] font-normal">
-                Payment Method
-              </span>
+                <span className="text-base text-[#8A7A72] font-normal">
+                  Payment Method
+                </span>
 
-            </h2>
-            <p className="mt-3 mb-8 text-sm text-[#8A7A72]">
+              </h2>
 
-              원하시는 결제수단을 선택해주세요.
+              <p className="mt-3 mb-8 text-sm text-[#8A7A72]">
 
-              <span className="ml-2 italic">
+                원하시는 결제수단을 선택해주세요.
 
-              (Select your preferred payment method.)
+                <span className="ml-2 italic">
+                  (Select your preferred payment method.)
+                </span>
 
-              </span>
+              </p>
 
-            </p>
-            <div className="mt-8 space-y-4">
+              <div className="mt-8 space-y-4">
 
-              <label
-                className="
-                flex
-                items-center
-                gap-4
-                border
-                border-[#D8C7BD]
-                rounded-2xl
-                p-5
-                cursor-pointer
-                "
-              >
+                {/* CARD */}
 
-                <input
-                  type="radio"
-                  name="payment"
-                  value="card"
-                  checked={paymentMethod === "card"}
-                  onChange={() =>
-                    setPaymentMethod("card")
-                  }
-                />
+                <label
+                  className="
+                  flex
+                  items-center
+                  gap-4
+                  border
+                  border-[#D8C7BD]
+                  rounded-2xl
+                  p-5
+                  cursor-pointer
+                  "
+                >
 
-              <div>
+                  <input
+                    type="radio"
+                    name="payment"
+                    value="card"
+                    checked={paymentMethod === "card"}
+                    onChange={() =>
+                      setPaymentMethod("card")
+                    }
+                  />
 
-              <div className="font-medium">
-                신용카드
+                  <div>
+
+                    <div className="font-medium">
+                      신용카드
+                    </div>
+
+                    <div className="text-sm text-[#8A7A72] mt-1">
+                      Credit Card
+                    </div>
+
+                  </div>
+
+                </label>
+
+                {/* BANK */}
+
+                <label
+                  className="
+                  flex
+                  items-center
+                  gap-4
+                  border
+                  border-[#D8C7BD]
+                  rounded-2xl
+                  p-5
+                  cursor-pointer
+                  "
+                >
+
+                  <input
+                    type="radio"
+                    name="payment"
+                    value="bank"
+                    checked={paymentMethod === "bank"}
+                    onChange={() =>
+                      setPaymentMethod("bank")
+                    }
+                  />
+
+                  <div>
+
+                    <div className="font-medium">
+                      실시간 계좌이체
+                    </div>
+
+                    <div className="text-sm text-[#8A7A72] mt-1">
+                      Bank Transfer
+                    </div>
+
+                  </div>
+
+                </label>
+
+                {/* VBANK */}
+
+                <label
+                  className="
+                  flex
+                  items-center
+                  gap-4
+                  border
+                  border-[#D8C7BD]
+                  rounded-2xl
+                  p-5
+                  cursor-pointer
+                  "
+                >
+
+                  <input
+                    type="radio"
+                    name="payment"
+                    value="vbank"
+                    checked={paymentMethod === "vbank"}
+                    onChange={() =>
+                      setPaymentMethod("vbank")
+                    }
+                  />
+
+                  <div>
+
+                    <div className="font-medium">
+                      가상계좌
+                    </div>
+
+                    <div className="text-sm text-[#8A7A72] mt-1">
+                      Virtual Account
+                    </div>
+
+                  </div>
+
+                </label>
+
               </div>
-
-              <div className="text-sm text-[#8A7A72] mt-1">
-                Credit Card
-              </div>
-
-              </div>
-
-              </label>
-
-              <label
-                className="
-                flex
-                items-center
-                gap-4
-                border
-                border-[#D8C7BD]
-                rounded-2xl
-                p-5
-                cursor-pointer
-                "
-              >
-
-                <input
-                  type="radio"
-                  name="payment"
-                  value="bank"
-                  checked={paymentMethod === "bank"}
-                  onChange={() =>
-                    setPaymentMethod("bank")
-                  }
-                />
-
-                <div>
-
-                <div className="font-medium">
-                  실시간 계좌이체
-                </div>
-
-                <div className="text-sm text-[#8A7A72] mt-1">
-                  Bank Transfer
-                </div>
-
-                </div>
-
-              </label>
-
-              <label
-                className="
-                flex
-                items-center
-                gap-4
-                border
-                border-[#D8C7BD]
-                rounded-2xl
-                p-5
-                cursor-pointer
-                "
-              >
-
-                <input
-                  type="radio"
-                  name="payment"
-                  value="vbank"
-                  checked={paymentMethod === "vbank"}
-                  onChange={() =>
-                    setPaymentMethod("vbank")
-                  }
-                />
-
-                <div>
-
-                <div className="font-medium">
-                  가상계좌
-                </div>
-
-                <div className="text-sm text-[#8A7A72] mt-1">
-                  Virtual Account
-                </div>
-
-                </div>
-
-              </label>
-
-            </div>
 
             </section>
-
 
             <Agreement
               privacy={privacy}
@@ -398,6 +402,64 @@ export default function CheckoutClient() {
               setPrivacy={setPrivacy}
               setAge={setAge}
             />
+
+            {/* DOWNLOAD NOTICE */}
+
+            <div
+              className="
+              mt-10
+              border-t
+              border-[#D8C7BD]
+              pt-6
+              "
+            >
+
+              <p
+                className="
+                uppercase
+                tracking-[0.2em]
+                text-xs
+                text-[#B49A8D]
+                "
+              >
+                DIGITAL DOWNLOAD
+              </p>
+
+              <p
+                className="
+                mt-4
+                text-sm
+                leading-7
+                text-[#8A7A72]
+                "
+              >
+
+                디지털 상품(Mood Archive)은
+                <strong className="text-black">
+                  {" "}결제일로부터 3개월 동안 다운로드 가능합니다.
+                </strong>
+
+                <br />
+                다운로드 기간 종료 후에는
+                다운로드 링크가 자동으로 만료됩니다.
+
+                <br />
+                <br />
+
+                <span className="italic">
+
+                  Mood Archive digital products remain
+                  available for download for
+                  <strong className="text-black">
+                    {" "}3 months
+                  </strong>
+                  {" "}from the payment date.
+
+                </span>
+
+              </p>
+
+            </div>
 
             <button
               onClick={handleCheckout}
@@ -409,22 +471,24 @@ export default function CheckoutClient() {
               rounded-full
               bg-[#1E1E1E]
               text-white
-              hover:bg-[#000000]
+              hover:bg-black
               transition
-              disabled:opacity-30disabled:opacity-30
+              disabled:opacity-30
               "
             >
+
               <div className="flex flex-col items-center">
 
-              <span className="text-base font-medium">
-                결제하기
-              </span>
+                <span className="text-base font-medium">
+                  결제하기
+                </span>
 
-              <span className="text-xs mt-1 opacity-70">
-                Proceed to Payment →
-              </span>
+                <span className="text-xs mt-1 opacity-70">
+                  Proceed to Payment →
+                </span>
 
               </div>
+
             </button>
 
           </div>
