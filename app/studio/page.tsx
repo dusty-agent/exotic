@@ -199,29 +199,54 @@ const exportOrderSheet = () => {
   
     navigator.clipboard.writeText(content);
   };
-  const requestProduction = () => {
+  const submitOrder = async () => {
 
-    const requestId =
-      `STN-${Date.now()}`;
+    try {
   
-    const subject =
-      encodeURIComponent(
-        `[STONIN] ${requestId}`
-      );
+      const res = await fetch("/api/order",{
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json",
+        },
+        body:JSON.stringify({
   
-    const body =
-      encodeURIComponent(
-  `
-  Request ID
-  ${requestId}
+          customerName,
+          customerPhone,
+          customerEmail,
   
-  ${orderSheet}
-  `
-      );
+          type,
+          metal,
+          stone,
   
-    window.location.href =
-      `mailto:soyoung@draft.best?subject=${subject}&body=${body}`;
-  };
+          band,
+          size,
+  
+          chainStyle,
+          chainLength,
+  
+          earringStyle,
+          postMaterial,
+  
+          orderSheet,
+  
+        }),
+      });
+  
+      if(!res.ok){
+  
+        throw new Error();
+  
+      }
+  
+      alert("주문이 정상적으로 접수되었습니다.");
+  
+    } catch {
+  
+      alert("주문 접수에 실패했습니다.");
+  
+    }
+  
+  }; 
 
 const downloadTxt = () => {
 
@@ -989,7 +1014,7 @@ return ( <main className="mx-auto max-w-7xl px-8 py-12">
   </p>
 
   <button
-    onClick={requestProduction}
+    onClick={submitOrder}
     className="
     w-full
     rounded-lg

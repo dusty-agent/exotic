@@ -199,28 +199,60 @@ const exportOrderSheet = () => {
   
     navigator.clipboard.writeText(content);
   };
-  const requestProduction = () => {
-
-    const requestId =
-      `STN-${Date.now()}`;
+  const submitOrder = async () => {
+    if (!customerName || !customerEmail || !customerPhone) {
+      alert("고객 정보를 입력해주세요.");
+      return;
+    }
   
-    const subject =
-      encodeURIComponent(
-        `[STONIN] ${requestId}`
-      );
+    if (!orderSheet) {
+      alert("먼저 주문서를 생성해주세요.");
+      return;
+    }
   
-    const body =
-      encodeURIComponent(
-  `
-  Request ID
-  ${requestId}
+    try {
+      const res = await fetch("/api/order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          customerName,
+          customerPhone,
+          customerEmail,
   
-  ${orderSheet}
-  `
-      );
+          type,
+          metal,
+          stone,
   
-    window.location.href =
-      `mailto:soyoung@draft.best?subject=${subject}&body=${body}`;
+          band,
+          size,
+  
+          chainStyle,
+          chainLength,
+  
+          earringStyle,
+          postMaterial,
+  
+          orderSheet,
+        }),
+      });
+  
+      const result = await res.json();
+  
+      if (!result.success) {
+        throw new Error();
+      }
+  
+      alert("✨ 주문이 정상적으로 접수되었습니다.");
+  
+    } catch (err) {
+  
+      console.error(err);
+  
+      alert("메일 전송에 실패했습니다.");
+  
+    }
   };
 
 const downloadTxt = () => {
@@ -645,7 +677,7 @@ return ( <main className="mx-auto max-w-7xl px-8 py-12">
   confirming the details.
 </p>
       <button
-        onClick={requestProduction}
+        onClick={submitOrder}
         className="
         w-full
         rounded-lg
