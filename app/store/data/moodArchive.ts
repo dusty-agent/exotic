@@ -96,17 +96,17 @@ export const moodArchive = {
       images: {
   
         cover:
-          "/greenery-mist/GREENARYMIST_C_1.png",
+          "/greenery-mist/GREENERYMIST_C_1.png",
   
         gallery: [
   
-          "/greenery-mist/GREENARYMIST_C_1.png",
-          "/greenery-mist/GREENARYMIST_C_2.png",
-          "/greenery-mist/GREENARYMIST_C_3.png",
+          "/greenery-mist/GREENERYMIST_C_1.png",
+          "/greenery-mist/GREENERYMIST_C_2.png",
+          "/greenery-mist/GREENERYMIST_C_3.png",
   
-          "/greenery-mist/GREENARYMIST_R_1.png",
-          "/greenery-mist/GREENARYMIST_R_2.png",
-          "/greenery-mist/GREENARYMIST_R_3.png",
+          "/greenery-mist/GREENERYMIST_R_1.png",
+          "/greenery-mist/GREENERYMIST_R_2.png",
+          "/greenery-mist/GREENERYMIST_R_3.png",
   
         ],
 

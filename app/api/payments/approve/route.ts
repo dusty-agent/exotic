@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
+console.log("APPROVE VERSION 2026-07-12");
+
 const resend = new Resend(
   process.env.RESEND_API_KEY
 );
@@ -18,21 +20,32 @@ export async function POST(
     Object.fromEntries(body.entries())
   );
 
-  const email =
-    body.get("buyerEmail")?.toString()
-    || "theplaceyoung@gmail.com";
-
   const orderId =
     body.get("orderId")?.toString()
     || `EO-${Date.now()}`;
 
-  const reserved =
+    const reserved =
     body.get("mallReserved")?.toString();
-
-  const slug =
-    reserved
-      ? JSON.parse(reserved).slug
-      : "white-musk";
+  
+    const reservedData =
+      reserved
+        ? JSON.parse(reserved)
+        : {};
+    
+    const slug =
+      reservedData.slug ?? "white-musk";
+    
+    const email =
+      reservedData.buyerEmail ?? "";
+    
+    const buyerName =
+      reservedData.buyerName ?? "";
+    
+    const buyerTel =
+      reservedData.buyerTel ?? "";
+    
+    const newsletter =
+      reservedData.newsletter ?? false;
 
   const productName =
     body.get("goodsName")?.toString()
@@ -41,6 +54,8 @@ export async function POST(
   const amount =
     body.get("amount")?.toString()
     || "-";
+
+  console.log(reservedData);
 
   try {
 
@@ -400,3 +415,4 @@ export async function POST(
   );
 
 }
+

@@ -172,7 +172,14 @@ export default function CheckoutClient() {
   
   localStorage.setItem(
     "latest-order",
-    JSON.stringify(order)
+    JSON.stringify({
+      id: order.id,
+      customer: order.customer,
+      email: order.email,
+      slug: order.items[0].slug,
+      createdAt: order.createdAt,
+      expiresAt: order.expiresAt,
+    })
   );
 
   AUTHNICE.requestPay({
@@ -192,8 +199,16 @@ export default function CheckoutClient() {
         ? products[0].title
         : `상품 ${products.length}건`,
 
-      mallReserved: JSON.stringify({
+        buyerName: customer.name,
+        buyerEmail: customer.email,
+        buyerTel: customer.phone,
+
+        mallReserved: JSON.stringify({
           slug: products[0].slug,
+          buyerName: customer.name,
+          buyerEmail: customer.email,
+          buyerTel: customer.phone,
+          newsletter: customer.newsletter,
         }),
 
     returnUrl:

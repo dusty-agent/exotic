@@ -6,6 +6,7 @@ type Order = {
   id: string;
   customer: string;
   email: string;
+  slug: string;
   createdAt: string;
   expiresAt: string;
 };
@@ -232,28 +233,29 @@ export default function SuccessPage() {
                 will also be sent to your email.
               </p>
 
-              <a
-                href="https://exoticordinary.com/api/download/${slug}"
-                download
-                className="
-                mt-12
-                inline-flex
-                items-center
-                justify-center
-                px-12
-                py-5
-                rounded-full
-                bg-[#1E1E1E]
-                text-white
-                hover:bg-black
-                transition
-                " >
+              {order && (
 
+                  <a
+                    href={`/api/download/${order.slug}`}
+                    className="
+                      mt-12
+                      inline-flex
+                      items-center
+                      justify-center
+                      px-12
+                      py-5
+                      rounded-full
+                      bg-[#1E1E1E]
+                      text-white
+                      hover:bg-black
+                      transition
+                    "
+                  >
+                    ZIP 다운로드
+                    Download ZIP →
+                  </a>
 
-                ZIP 다운로드
-                Download ZIP →
-
-              </a>
+                  )}
 
             </div>
 
