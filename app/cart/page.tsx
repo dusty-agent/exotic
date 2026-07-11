@@ -78,7 +78,7 @@ export default function CartPage() {
   
       if (!product) return sum;
   
-      if (product.category === "Visual Archive") {
+      if (product.category === "Mood Archive") {
   
         return sum;
   
@@ -105,7 +105,7 @@ export default function CartPage() {
   
     if (!product) return false;
   
-    return product.category !== "Visual Archive";
+    return product.category !== "Mood Archive";
   
   });
   
@@ -229,8 +229,8 @@ export default function CartPage() {
 
                         <p className="mt-2 text-[#8A7A72]">
 
-                          {product.category === "Visual Archive"
-                            ? "비주얼 아카이브"
+                          {product.category === "Mood Archive"
+                            ? "무드 아카이브"
                             : product.category === "925 Silver"
                             ? "925 실버"
                             : product.category === "Exotic Livings"
@@ -248,7 +248,7 @@ export default function CartPage() {
                         <p className="mt-2 text-xs text-[#8A7A72] italic">
 
                           {
-                            product.category === "Visual Archive"
+                            product.category === "Mood Archive"
 
                               ? "결제 후 즉시 다운로드"
                               : "영업일 기준 1~2일 내 배송"

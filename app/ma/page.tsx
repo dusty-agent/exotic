@@ -111,10 +111,10 @@ export default function MAPage() {
 
               <h2 className="text-2xl font-light">
 
-                비주얼 아카이브
+                무드 아카이브
 
                 <span className="ml-3 text-base text-[#8A7A72]">
-                  Visual Archive
+                  Mood Archive
                 </span>
 
               </h2>

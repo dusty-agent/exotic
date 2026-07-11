@@ -28,32 +28,37 @@ export async function POST(
     body.get("mallReserved")?.toString();
   
     const reservedData =
-      reserved
-        ? JSON.parse(reserved)
-        : {};
-    
-    const slug =
-      reservedData.slug ?? "white-musk";
+      reserved ? JSON.parse(reserved) : {};
+
+    const {
+      slug,
+      category,
+      buyerName,
+      buyerEmail,
+      buyerTel,
+      zipcode,
+      address,
+      detailAddress,
+      memo,
+    } = reservedData;
     
     const email =
       reservedData.buyerEmail ?? "";
     
-    const buyerName =
-      reservedData.buyerName ?? "";
-    
-    const buyerTel =
-      reservedData.buyerTel ?? "";
     
     const newsletter =
       reservedData.newsletter ?? false;
 
-  const productName =
-    body.get("goodsName")?.toString()
-    || "Mood Archive";
+    const isDigital =
+      category === "Mood Archive";
+    
+    const productName =
+      body.get("goodsName")?.toString()
+      || "Mood Archive";
 
-  const amount =
-    body.get("amount")?.toString()
-    || "-";
+    const amount =
+      body.get("amount")?.toString()
+      || "-";
 
   console.log(reservedData);
 

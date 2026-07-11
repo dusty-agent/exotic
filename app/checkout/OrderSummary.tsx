@@ -46,7 +46,7 @@ export default function OrderSummary({
                 <p className="mt-2 text-[#8A7A72]">
 
                   {
-                    product.category === "Visual Archive"
+                    product.category === "Mood Archive"
 
                       ? "Instant Digital Download"
 
@@ -67,7 +67,7 @@ export default function OrderSummary({
                 <p className="mt-2 text-xs italic text-[#8A7A72]">
 
                   {
-                    product.category === "Visual Archive"
+                    product.category === "Mood Archive"
 
                       ? "Delivered immediately after payment."
 

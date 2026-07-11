@@ -85,7 +85,7 @@ export default function CheckoutClient() {
 
     product =>
 
-        product.category !== "Visual Archive"
+        product.category !== "Mood Archive"
 
 );
   const total =
@@ -105,7 +105,7 @@ export default function CheckoutClient() {
 
     (sum, product) => {
   
-      if (product.category === "Visual Archive") {
+      if (product.category === "Mood Archive") {
   
         return sum;
   
@@ -205,9 +205,17 @@ export default function CheckoutClient() {
 
         mallReserved: JSON.stringify({
           slug: products[0].slug,
+          category: products[0].category,
+        
           buyerName: customer.name,
           buyerEmail: customer.email,
           buyerTel: customer.phone,
+        
+          zipcode: customer.zipcode,
+          address: customer.address,
+          detailAddress: customer.detailAddress,
+          memo: customer.memo,
+        
           newsletter: customer.newsletter,
         }),
 

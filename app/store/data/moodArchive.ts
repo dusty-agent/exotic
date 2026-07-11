@@ -6,7 +6,7 @@ export const moodArchive = {
   
       title: "Aqua Veil",
   
-      category: "Visual Archive",
+      category: "Mood Archive",
   
       price: 1490,
   
@@ -44,7 +44,7 @@ export const moodArchive = {
   
       title: "Blush Peony",
   
-      category: "Visual Archive",
+      category: "Mood Archive",
   
       price: 1490,
   
@@ -82,7 +82,7 @@ export const moodArchive = {
   
       title: "Greenery Mist",
   
-      category: "Visual Archive",
+      category: "Mood Archive",
   
       price: 1490,
   
@@ -120,7 +120,7 @@ export const moodArchive = {
   
       title: "Petal Memory",
   
-      category: "Visual Archive",
+      category: "Mood Archive",
   
       price: 1490,
   
@@ -158,7 +158,7 @@ export const moodArchive = {
   
       title: "White Musk",
   
-      category: "Visual Archive",
+      category: "Mood Archive",
   
       price: 1490,
   
@@ -196,7 +196,7 @@ export const moodArchive = {
   
       title: "Original Collection",
   
-      category: "Visual Archive",
+      category: "Mood Archive",
   
       price: 1490,
   

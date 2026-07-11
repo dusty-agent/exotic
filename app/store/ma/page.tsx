@@ -31,7 +31,7 @@ export default function MoodArchivePage() {
           font-light
           "
         >
-          Visual Archive
+          Mood Archive
         </h1>
 
         <p
