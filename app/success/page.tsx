@@ -232,23 +232,28 @@ export default function SuccessPage() {
                 will also be sent to your email.
               </p>
 
-              <button
-                disabled
-                //href={downloadUrl}
-                //download
+              <a
+                href="https://exoticordinary.com/api/download/${slug}"
+                download
                 className="
                 mt-12
+                inline-flex
+                items-center
+                justify-center
                 px-12
                 py-5
                 rounded-full
                 bg-[#1E1E1E]
                 text-white
-                opacity-40
-                cursor-not-allowed
-                "
-              >
+                hover:bg-black
+                transition
+                " >
+
+
+                ZIP 다운로드
                 Download ZIP →
-              </button>
+
+              </a>
 
             </div>
 

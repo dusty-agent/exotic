@@ -26,99 +26,142 @@ export async function POST(
     body.get("orderId")?.toString()
     || `EO-${Date.now()}`;
 
+  const reserved =
+    body.get("mallReserved")?.toString();
+
+  const slug =
+    reserved
+      ? JSON.parse(reserved).slug
+      : "white-musk";
+
+  const productName =
+    body.get("goodsName")?.toString()
+    || "Mood Archive";
+
+  const amount =
+    body.get("amount")?.toString()
+    || "-";
+
   try {
 
-    const result = await resend.emails.send({
+    // ===========================
+    // 관리자 메일
+    // ===========================
+
+    await resend.emails.send({
 
       from:
-        "EXOTIC ORDINARY <support@dustydraft.com>",
-      
-      replyTo:
-        "soyoung@dustydraft.com",
+        "EXOTIC ORDINARY <support@exoticordinary.com>",
 
-      to: email,
+      to:
+        "support@exoticordinary.com",
+
+      replyTo:
+        email,
 
       subject:
-        "주문이 완료되었습니다. | Order Confirmation",
+        `📦 [NEW DIGITAL ORDER] ${productName} • ${orderId}`,
 
       html: `
 
-      <div style="font-family:Arial,sans-serif;max-width:620px;margin:auto;padding:40px;line-height:1.7;color:#333;">
+      <div style="background:#f5f3ef;padding:40px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#222;">
 
-        <p style="letter-spacing:3px;font-size:12px;color:#999;">
-          EXOTIC ORDINARY®
-        </p>
+      <div style="max-width:700px;margin:auto;background:#fff;border-radius:16px;padding:42px;">
 
-        <h1 style="font-weight:300;">
-          감사합니다.
-        </h1>
+      <div style="font-size:13px;letter-spacing:3px;color:#999;">
+      EXOTIC ORDINARY®
+      </div>
 
-        <p>
+      <h1 style="margin-top:18px;">
+      📦 New Digital Order
+      </h1>
 
-          주문이 정상적으로 완료되었습니다.
+      <hr style="margin:30px 0;border:none;border-top:1px solid #eee;">
 
-          <br/>
+      <table style="width:100%;line-height:2;font-size:15px;">
 
-          Thank you for your purchase.
+      <tr>
 
-        </p>
+      <td style="color:#777;width:170px;">
+      주문번호
+      </td>
 
-        <hr style="margin:40px 0;border:none;border-top:1px solid #eee;">
+      <td>
+      <strong>${orderId}</strong>
+      </td>
 
-        <p>
+      </tr>
 
-          <strong>주문번호</strong><br/>
+      <tr>
 
-          ${orderId}
+      <td style="color:#777;">
+      이메일
+      </td>
 
-        </p>
+      <td>
+      ${email}
+      </td>
 
-        <p>
+      </tr>
 
-          디지털 상품은
-          <strong>결제일로부터 3개월</strong>
-          동안 다운로드 가능합니다.
+      <tr>
 
-        </p>
+      <td style="color:#777;">
+      상품
+      </td>
 
-        <p>
+      <td>
+      ${productName}
+      </td>
 
-          Digital downloads remain available
-          for <strong>3 months</strong>
-          from the payment date.
+      </tr>
 
-        </p>
+      <tr>
 
-        <div style="margin-top:50px;">
+      <td style="color:#777;">
+      결제금액
+      </td>
 
-          <a
-            href="https://exoticordinary.com/success"
-            style="
-            background:#111;
-            color:white;
-            text-decoration:none;
-            padding:16px 28px;
-            border-radius:999px;
-            display:inline-block;
-            "
-          >
+      <td>
+      ${amount} KRW
+      </td>
 
-            주문 확인하기
-            (View Order)
+      </tr>
 
-          </a>
+      <tr>
 
-        </div>
+      <td style="color:#777;">
+      다운로드
+      </td>
 
-        <p style="margin-top:60px;color:#999;font-size:13px;">
+      <td>
+      결제일로부터 3개월
+      </td>
 
-          Need Help?
+      </tr>
 
-          <br/>
+      </table>
 
-          support@dustydraft.com
+      <div style="margin-top:40px;">
 
-        </p>
+      <a
+      href="mailto:${email}"
+      style="
+      display:inline-block;
+      background:#111;
+      color:#fff;
+      text-decoration:none;
+      padding:14px 24px;
+      border-radius:999px;
+      ">
+
+      고객에게 메일 보내기
+
+      </a>
+
+      </div>
+
+      </div>
 
       </div>
 
@@ -126,9 +169,227 @@ export async function POST(
 
     });
 
-    console.log(result);
+    // ===========================
+    // 고객 메일
+    // ===========================
+    await resend.emails.send({
+
+      from:
+        "EXOTIC ORDINARY <support@exoticordinary.com>",
+
+      to:
+        email,
+
+      replyTo:
+        "support@exoticordinary.com",
+
+      subject:
+        `✨ 주문이 완료되었습니다. (${orderId})`,
+
+      html: `
+
+      <div style="background:#f5f3ef;padding:40px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#222;">
+
+      <div style="max-width:620px;margin:0 auto;background:#fff;border-radius:16px;padding:48px;">
+
+      <div style="text-align:center;">
+
+      <div style="font-size:13px;letter-spacing:4px;color:#999;">
+      EXOTIC ORDINARY®
+      </div>
+
+      <h1 style="margin:16px 0 10px;font-size:34px;font-weight:500;">
+      Thank You
+      </h1>
+
+      <p style="color:#777;">
+      Mood Archive
+      </p>
+
+      </div>
+
+      <hr style="margin:40px 0;border:none;border-top:1px solid #eee;">
+
+      <h2 style="font-size:28px;">
+      주문이 완료되었습니다.
+      </h2>
+
+      <p style="line-height:1.9;font-size:16px;">
+
+      구매해주셔서 감사합니다.
+
+      <br/>
+
+      결제가 정상적으로 완료되었습니다.
+
+      </p>
+
+      <div
+      style="
+      margin:40px 0;
+      padding:26px;
+      background:#fafafa;
+      border-radius:14px;
+      ">
+
+      <table
+      style="
+      width:100%;
+      line-height:2;
+      font-size:15px;
+      ">
+
+      <tr>
+
+      <td style="color:#777;">
+      주문번호
+      </td>
+
+      <td>
+      ${orderId}
+      </td>
+
+      </tr>
+
+      <tr>
+
+      <td style="color:#777;">
+      상품
+      </td>
+
+      <td>
+      ${productName}
+      </td>
+
+      </tr>
+
+      <tr>
+
+      <td style="color:#777;">
+      결제금액
+      </td>
+
+      <td>
+      ${amount} KRW
+      </td>
+
+      </tr>
+
+      <tr>
+
+      <td style="color:#777;">
+      다운로드
+      </td>
+
+      <td>
+      결제일로부터 3개월
+      </td>
+
+      </tr>
+
+      </table>
+
+      </div>
+
+      <div style="text-align:center;">
+
+      <a
+
+      href="https://exoticordinary.com/api/download/${slug}"
+
+      style="
+      display:inline-block;
+      padding:16px 34px;
+      background:#111;
+      color:#fff;
+      text-decoration:none;
+      border-radius:999px;
+      ">
+
+      Download ZIP
+
+      </a>
+
+      </div>
+
+      <div
+      style="
+      margin-top:45px;
+      padding:22px;
+      background:#f8f6f2;
+      border-radius:14px;
+      ">
+
+      <strong>안내사항</strong>
+
+      <ul
+      style="
+      margin-top:16px;
+      padding-left:20px;
+      line-height:2;
+      ">
+
+      <li>
+      다운로드는 결제일 기준 3개월 가능합니다.
+      </li>
+
+      <li>
+      개인 라이선스 상품입니다.
+      </li>
+
+      <li>
+      재배포 및 재판매는 허용되지 않습니다.
+      </li>
+
+      <li>
+      문제가 있으시면 언제든 문의해주세요.
+      </li>
+
+      </ul>
+
+      </div>
+
+      <div
+      style="
+      margin-top:50px;
+      text-align:center;
+      font-size:13px;
+      color:#888;
+      line-height:2;
+      ">
+
+      Need Help?
+
+      <br/>
+
+      <a
+      href="mailto:support@exoticordinary.com"
+      style="
+      color:#777;
+      text-decoration:none;
+      ">
+
+      support@exoticordinary.com
+
+      </a>
+
+      <br/><br/>
+
+      https://exoticordinary.com
+
+      </div>
+
+      </div>
+
+      </div>
+
+      `,
+
+    });
 
   } catch (error) {
+
+    console.error("MAIL ERROR");
 
     console.error(error);
 

@@ -192,6 +192,10 @@ export default function CheckoutClient() {
         ? products[0].title
         : `상품 ${products.length}건`,
 
+      mallReserved: JSON.stringify({
+          slug: products[0].slug,
+        }),
+
     returnUrl:
       `${window.location.origin}/api/payments/approve`,
 

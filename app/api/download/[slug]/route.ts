@@ -9,11 +9,26 @@ export async function GET(
 
   const { slug } = await params;
 
+  const files: Record<string, string> = {
+    "white-musk": "EO_MoodArchive_WhiteMusk.zip",
+    "aqua-veil": "EO_MoodArchive_AquaVeil.zip",
+    "blush-peony": "EO_MoodArchive_BlushPeony.zip",
+    "greenery-mist": "EO_MoodArchive_GreeneryMist.zip",
+    "original-collection": "EO_MoodArchive_OriginalCollection.zip",
+    "petal-memory": "EO_MoodArchive_PetalMemory.zip",
+  };
+  
+  const filename = files[slug];
+  
+  if (!filename) {
+    return new Response("Not Found", { status: 404 });
+  }
+  
   const filePath = path.join(
     process.cwd(),
     "private",
     "downloads",
-    `${slug}.zip`
+    filename
   );
 
   if (!fs.existsSync(filePath)) {

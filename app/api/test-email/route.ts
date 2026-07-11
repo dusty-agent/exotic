@@ -10,10 +10,10 @@ export async function GET() {
   const result = await resend.emails.send({
 
     from:
-      "EXOTIC ORDINARY <support@dustydraft.com>",
-
+      "EXOTIC ORDINARY <support@exoticordinary.com>",
+  
     replyTo:
-      "soyoung@dustydraft.com",
+      "support@exoticordinary.com",
 
     to:
       "theplaceyoung@gmail.com",
