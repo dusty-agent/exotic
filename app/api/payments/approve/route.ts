@@ -411,7 +411,8 @@ export async function POST(
   }
 
   return NextResponse.redirect(
-    new URL("/success", req.url)
+    new URL("/success", req.url),
+    303
   );
 
 }
