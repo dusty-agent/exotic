@@ -204,8 +204,12 @@ export default function CheckoutClient() {
         buyerTel: customer.phone,
 
         mallReserved: JSON.stringify({
-          slug: products[0].slug,
-          category: products[0].category,
+
+          products: products.map(p => ({
+            slug: p.slug,
+            category: p.category,
+            title: p.title,
+          })),
         
           buyerName: customer.name,
           buyerEmail: customer.email,
@@ -217,6 +221,7 @@ export default function CheckoutClient() {
           memo: customer.memo,
         
           newsletter: customer.newsletter,
+        
         }),
 
     returnUrl:
